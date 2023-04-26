@@ -1,13 +1,27 @@
-function SignUp() {
+function SignUp(props) {
   return (
     <>
       <div className="container form ">
-        <form className="d-flex flex-column ">
+        <form className="d-flex flex-column close">
+          <big
+            onClick={() => {
+              props.setBtnStatus({ signUp: false, signIn: false });
+            }}
+          >
+            x
+          </big>
           <div className="d-flex justify-content-between p-1">
             <div className="">
               <h2>Sign up</h2>
               <span>or</span>{" "}
-              <span className="create-account">login to your account</span>
+              <span
+                className="create-account"
+                onClick={() => {
+                  props.setBtnStatus({ signUp: false, signIn: true });
+                }}
+              >
+                login to your account
+              </span>
             </div>
             <img
               class=""
@@ -20,9 +34,9 @@ function SignUp() {
 
           <div className="form-floating m-2 ">
             <input
-              className="form-control text-secondary  "
+              className="form-control text-secondary "
               id="phone-number"
-              type="number"
+              type="text"
               required
               tabindex="1"
               maxlength="10"
@@ -36,7 +50,7 @@ function SignUp() {
               <input
                 className="form-control"
                 type="text"
-                maxLength="20"
+                maxlength="20"
                 required
                 placeholder="Name"
                 id="name"

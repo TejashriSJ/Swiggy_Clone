@@ -7,6 +7,7 @@ import PromotionBlock from "./component/PromotionBlock";
 import ItemsHeader from "./component/ItemsHeader";
 import Restaurants from "./component/Restaurants";
 import SignUp from "./component/Header/SignUp";
+import RouteNotFound from "./component/RouteNotFound/index";
 
 function App() {
   return (
@@ -17,8 +18,6 @@ function App() {
           element={
             <div className="App">
               <Header />
-              {/* <SignIn />
-              <SignUp /> */}
               <PromotionBlock />
               <ItemsHeader />
               <Restaurants />
@@ -26,6 +25,7 @@ function App() {
             </div>
           }
         ></Route>
+        <Route path="*" element={<RouteNotFound />} />
       </Routes>
     </body>
   );

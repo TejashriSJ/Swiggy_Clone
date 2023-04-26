@@ -1,20 +1,28 @@
 import swiggyLogo from "../../swiggy.svg";
 import { Link } from "react-router-dom";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 import "./header.css";
+import { useState } from "react";
 
 function Header() {
+  const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
+
   return (
     <div>
       <nav className="navbar navbar-expand ">
         <div className="container header d-flex ">
           <div className="d-flex align-items-center gap-2 me-5">
-            <img
-              className="navbar-brand "
-              src={swiggyLogo}
-              height="70"
-              width="120"
-              alt="swiggy logo"
-            ></img>
+            <Link to="/">
+              <img
+                className="navbar-brand "
+                src={swiggyLogo}
+                height="70"
+                width="120"
+                alt="swiggy logo"
+              ></img>
+            </Link>
+
             <p className="">
               <b className="pb-1 border-bottom border-dark">Other </b>
               <small className="text-secondary">
@@ -52,13 +60,25 @@ function Header() {
                   class="fa-regular fa-user"
                   style={{ color: "#000000" }}
                 ></i>{" "}
-                Login{" "}
+                <span
+                  onClick={() => {
+                    setBtnStatus({ signIn: true, signUp: false });
+                  }}
+                >
+                  Login
+                </span>{" "}
               </li>
               <li className="nav-link"> Cart</li>
             </ul>
           </div>
         </div>
       </nav>
+      {(btnStatus.signIn || btnStatus.signUp) && (
+        <div className="background-blur">
+          {btnStatus.signIn && <SignIn setBtnStatus={setBtnStatus} />}
+          {btnStatus.signUp && <SignUp setBtnStatus={setBtnStatus} />}
+        </div>
+      )}
     </div>
   );
 }

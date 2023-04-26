@@ -21,8 +21,17 @@
 /* form */
 
 .form {
-  width: 25rem;
+  width: 28rem;
+  position: absolute;
+  height: 100vh;
+  right: 0rem;
+  top: 0rem;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  font-size: small;
 }
+
 .create-account {
   color: #fc8019;
   cursor: pointer;
@@ -31,12 +40,13 @@
   object-fit: contain;
 }
 .form-control {
-  border: 1px solid gray;
+  border: 1px solid rgb(194, 192, 192);
   border-radius: 0rem;
+  box-sizing: border-box;
 }
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid gray;
+  border: 1px solid rgb(194, 192, 192);
 }
 
 .btn {
@@ -48,4 +58,19 @@
 }
 .btn:hover {
   background-color: #fc8019;
+}
+.close {
+  cursor: pointer;
+  font-size: larger;
+  padding: 2rem;
+}
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
