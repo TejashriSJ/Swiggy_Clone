@@ -1,0 +1,18 @@
+.root-not-found {
+  background-image: url("./404Resized_hoeune.webp");
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 100%;
+  padding-bottom: 60%;
+  background-size: contain;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+.btn a:hover {
+  background-color: #fc8019;
+}
