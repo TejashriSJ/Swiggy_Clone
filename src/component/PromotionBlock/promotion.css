@@ -4,7 +4,6 @@
 }
 .promotion img {
   cursor: pointer;
-  overflow: hidden;
 }
 .promotion {
   width: 100vw;

@@ -1,8 +1,47 @@
+import { useState } from "react";
+import validator from "validator";
+import { Link } from "react-router-dom";
+
 function SignIn(props) {
+  const [formData, setFormData] = useState({
+    phoneNumber: "",
+  });
+  const [isFormSubmit, setIsFormSubmit] = useState(false);
+  const [formLabel, setFormLabel] = useState({ phoneNumber: "Phone Number" });
+
+  const onChange = (event) => {
+    if (validator.isNumeric(event.target.value) || event.target.value === "") {
+      setFormData({
+        phoneNumber: event.target.value,
+      });
+    }
+    setFormLabel({ phoneNumber: "Phone Number" });
+  };
+  const formOnSubmit = (event) => {
+    event.preventDefault();
+
+    if (formData.phoneNumber.length !== 10 || formData.phoneNumber === "") {
+      setFormLabel({
+        phoneNumber: <p className="text-danger">Enter Your Phone Number</p>,
+      });
+    } else if (!validator.isNumeric(formData.phoneNumber)) {
+      setFormLabel({
+        phoneNumber: <p className="text-danger">Invalid Mobile Number</p>,
+      });
+    } else {
+      setIsFormSubmit(true);
+    }
+  };
+
+  const onClickOk = () => {
+    setIsFormSubmit(false);
+    props.setBtnStatus({ signUp: false, signIn: false });
+  };
+
   return (
     <>
       <div className="container form ">
-        <form className="d-flex flex-column close ">
+        <form className="d-flex flex-column close " onSubmit={formOnSubmit}>
           <big
             onClick={() => {
               props.setBtnStatus({ signUp: false, signIn: false });
@@ -40,11 +79,13 @@ function SignIn(props) {
               required
               tabindex="1"
               maxlength="10"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Phone number"
+              value={formData.phoneNumber}
+              onChange={onChange}
             />
             <label for="phone-number" className="text-secondary ">
-              Phone number
+              {formLabel.phoneNumber}
             </label>
           </div>
           <div className="d-flex flex-column">
@@ -60,6 +101,20 @@ function SignIn(props) {
                 Privacy Policy
               </a>
             </small>
+          </div>
+          <div>
+            {isFormSubmit && (
+              <div className="blur-login-bg">
+                <div className="d-flex flex-column align-items-center justify-content-center">
+                  <p className="text-success">Login Successfull</p>
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <button className="btn " onClick={onClickOk}>
+                      OK
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </form>
       </div>

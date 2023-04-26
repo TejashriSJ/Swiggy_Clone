@@ -1,5 +1,6 @@
 .header {
-  gap: 20rem;
+  padding: 1rem;
+  width: 80vw;
 }
 .navbar-brand:hover {
   transform: scale(1.1);
@@ -10,11 +11,7 @@
   cursor: pointer;
   font-weight: 400;
 }
-.navBar li:hover {
-  color: #fc8019;
-}
-
-.navBar li:active {
+li:hover {
   color: #fc8019;
 }
 
@@ -73,4 +70,12 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
+}
+
+.prompt {
+  text-decoration: none;
+  list-style: none;
+}
+a:hover {
+  color: white;
 }

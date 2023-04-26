@@ -1,8 +1,105 @@
+import { useState } from "react";
+import validator from "validator";
+import { Link } from "react-router-dom";
+
 function SignUp(props) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+  });
+  const [isFormSubmit, setIsFormSubmit] = useState(false);
+
+  const initLabels = {
+    phoneNumber: "Phone Number",
+    name: "Name",
+    email: "Email",
+  };
+  const errorMessage = {
+    phoneNumber: <p className="text-danger">Enter Your Phone Number</p>,
+    name: <p className="text-danger">Invalid Name</p>,
+    email: <p className="text-danger">Invalid Email Address</p>,
+  };
+
+  const [labels, setLabels] = useState(initLabels);
+
+  const onChangeInput = (event) => {
+    setLabels({
+      ...labels,
+      [event.target.name]: initLabels[event.target.name],
+    });
+
+    if (event.target.name !== "phoneNumber") {
+      setFormData({
+        ...formData,
+        [event.target.name]: event.target.value,
+      });
+    } else if (
+      validator.isNumeric(event.target.value) ||
+      event.target.value === ""
+    ) {
+      setFormData({
+        ...formData,
+        [event.target.name]: event.target.value,
+      });
+    }
+  };
+
+  const onBlurInputField = (event) => {
+    console.log(event.target.name);
+    if (event.target.name === "phoneNumber") {
+      if (formData.phoneNumber.length !== 10) {
+        setLabels({
+          ...labels,
+          phoneNumber: errorMessage.phoneNumber,
+        });
+      } else if (formData.phoneNumber[0] === "0") {
+        setLabels({
+          ...labels,
+          phoneNumber: <p className="text-danger">Invalid Phone Number</p>,
+        });
+      }
+    } else if (
+      event.target.name === "name" &&
+      !validator.isAlpha(formData.name)
+    ) {
+      setLabels({
+        ...labels,
+        name: errorMessage.name,
+      });
+    } else {
+      if (!validator.isEmail(formData.email)) {
+        setLabels({
+          ...labels,
+          email: errorMessage.email,
+        });
+      }
+    }
+  };
+
+  const onFormSubmit = (event) => {
+    if (
+      formData.name !== "" &&
+      formData.email !== "" &&
+      formData.phoneNumber !== "" &&
+      formData.phoneNumber.length === 10 &&
+      validator.isAlpha(formData.name) &&
+      validator.isEmail(formData.email) &&
+      validator.isMobilePhone(formData.phoneNumber)
+    ) {
+      setIsFormSubmit(true);
+    }
+    event.preventDefault();
+  };
+
+  const onClickOk = () => {
+    setIsFormSubmit(false);
+    props.setBtnStatus({ signUp: false, signIn: false });
+  };
   return (
     <>
       <div className="container form ">
-        <form className="d-flex flex-column close">
+        <form className="d-flex flex-column close" onSubmit={onFormSubmit}>
           <big
             onClick={() => {
               props.setBtnStatus({ signUp: false, signIn: false });
@@ -38,25 +135,32 @@ function SignUp(props) {
               id="phone-number"
               type="text"
               required
-              tabindex="1"
               maxlength="10"
+              name="phoneNumber"
+              value={formData.phoneNumber}
               autocomplete="off"
               placeholder="Phone number"
+              onChange={onChangeInput}
+              onBlur={onBlurInputField}
             />
             <label for="phone-number" className="text-secondary ">
-              Phone number
+              {labels.phoneNumber}
             </label>
             <div className="form-floating">
               <input
                 className="form-control"
                 type="text"
-                maxlength="20"
+                maxlength="30"
                 required
                 placeholder="Name"
                 id="name"
+                name="name"
+                value={formData.name}
+                onChange={onChangeInput}
+                onBlur={onBlurInputField}
               />
               <label className="text-secondary" for="name">
-                Name
+                {labels.name}
               </label>
             </div>
             <div className="form-floating">
@@ -65,15 +169,25 @@ function SignUp(props) {
                 id="email"
                 className="form-control"
                 placeholder="email"
+                name="email"
+                value={formData.email}
                 required
+                onChange={onChangeInput}
+                onBlur={onBlurInputField}
               />
               <label className="text-secondary" for="email">
-                Email
+                {labels.email}
               </label>
             </div>
           </div>
           <div className="d-flex flex-column">
-            <button className="btn text-light m-2 ">CONTINUE</button>
+            <button
+              type="submit"
+              className="btn text-light m-2 "
+              onClick={onFormSubmit}
+            >
+              CONTINUE
+            </button>
 
             <a href="#" className="text-decoration-none p-2">
               Have a referal code?
@@ -90,6 +204,20 @@ function SignUp(props) {
                 Privacy Policy
               </a>
             </small>
+          </div>
+          <div>
+            {isFormSubmit && (
+              <div className="blur-login-bg">
+                <div className="d-flex flex-column align-items-center justify-content-center">
+                  <p className="text-success">Regestered Successfully</p>
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <button className="btn prompt" onClick={onClickOk}>
+                      OK
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </form>
       </div>

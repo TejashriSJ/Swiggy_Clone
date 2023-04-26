@@ -10,14 +10,14 @@ function Header() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand ">
-        <div className="container header d-flex ">
-          <div className="d-flex align-items-center gap-2 me-5">
+      <nav>
+        <div className="container header d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center gap-2 ">
             <Link to="/">
               <img
                 className="navbar-brand "
                 src={swiggyLogo}
-                height="70"
+                height="60"
                 width="120"
                 alt="swiggy logo"
               ></img>
@@ -36,8 +36,8 @@ function Header() {
           </div>
 
           <div>
-            <ul className="navBar navbar-nav text-dark d-flex gap-4 ml-5">
-              <li className="nav-link d-flex align-items-center gap-1">
+            <ul className="d-none-md text-dark d-flex align-items-center justify-content-center gap-5 ">
+              <li className="d-flex align-items-center gap-1 ">
                 {" "}
                 <i
                   class="fa-solid fa-magnifying-glass fa-sm"
@@ -45,7 +45,7 @@ function Header() {
                 ></i>{" "}
                 Search
               </li>
-              <li className="nav-link d-flex align-items-center gap-1">
+              <li className="d-flex align-items-center gap-1 ">
                 {" "}
                 <i
                   class="fa-thin fa-percent fa-sm"
@@ -53,8 +53,8 @@ function Header() {
                 ></i>{" "}
                 Offers
               </li>
-              <li className="nav-link "> Help</li>
-              <li className="nav-link d-flex align-items-center gap-1">
+              <li className=""> Help</li>
+              <li className=" d-flex align-items-center gap-1">
                 {" "}
                 <i
                   class="fa-regular fa-user"
@@ -65,10 +65,16 @@ function Header() {
                     setBtnStatus({ signIn: true, signUp: false });
                   }}
                 >
-                  Login
+                  Sign In
                 </span>{" "}
               </li>
-              <li className="nav-link"> Cart</li>
+              <li className="d-flex align-items-center gap-1">
+                <i
+                  class="fa-solid fa-cart-shopping fa-sm"
+                  style={{ color: "#000000" }}
+                ></i>
+                Cart
+              </li>
             </ul>
           </div>
         </div>
