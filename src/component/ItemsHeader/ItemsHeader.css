@@ -1,0 +1,10 @@
+.navbar {
+  gap: 25rem;
+}
+.sortBar {
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+.sortBar li:hover {
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}

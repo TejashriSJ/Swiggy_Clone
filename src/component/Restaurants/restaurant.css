@@ -1,0 +1,27 @@
+.restaurants {
+  max-width: 100rem;
+  min-width: 100rem;
+}
+.card {
+  width: 18rem;
+  border-radius: 0rem;
+  padding: 1.5rem;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+.card img {
+  border-radius: 0rem;
+}
+.card-body {
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.card:hover {
+  border: 1px solid rgb(161, 157, 157);
+  box-sizing: border-box;
+}
+.rating {
+  background-color: #48c479;
+  color: white;
+}

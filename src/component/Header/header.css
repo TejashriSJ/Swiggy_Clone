@@ -1,0 +1,51 @@
+.header {
+  gap: 20rem;
+}
+.navbar-brand:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.navBar {
+  cursor: pointer;
+  font-weight: 400;
+}
+.navBar li:hover {
+  color: #fc8019;
+}
+
+.navBar li:active {
+  color: #fc8019;
+}
+
+/* form */
+
+.form {
+  width: 25rem;
+}
+.create-account {
+  color: #fc8019;
+  cursor: pointer;
+}
+.form img {
+  object-fit: contain;
+}
+.form-control {
+  border: 1px solid gray;
+  border-radius: 0rem;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid gray;
+}
+
+.btn {
+  background-color: #fc8019;
+  color: white;
+  border-radius: 0rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #fc8019;
+}

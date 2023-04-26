@@ -1,0 +1,11 @@
+.promotion img:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+.promotion img {
+  cursor: pointer;
+  overflow: hidden;
+}
+.promotion {
+  width: 100vw;
+}
