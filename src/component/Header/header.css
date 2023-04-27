@@ -1,6 +1,11 @@
 .header {
   padding: 1rem;
-  width: 80vw;
+  gap: 20rem;
+}
+@media (max-width: 1400px) {
+  .header {
+    gap: 3rem;
+  }
 }
 .navbar-brand:hover {
   transform: scale(1.1);

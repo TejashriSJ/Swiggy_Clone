@@ -6,5 +6,5 @@
   cursor: pointer;
 }
 .promotion {
-  width: 100vw;
+  min-width: 100vw;
 }

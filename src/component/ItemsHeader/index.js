@@ -14,8 +14,8 @@ function ItemsHeader() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <nav className="d-flex align-self-start  items-header  align-items-center mt-5 ">
-      <h3 className="restaurent-heading">Restaurants </h3>
+    <nav className="d-flex align-self-xl-center align-self-lg-start items-header  align-items-center mt-5 ">
+      <h3 className="restaurent-heading ">Restaurants </h3>
       <div className=" sortBar container d-flex ">
         <ul className=" text-dark d-flex  align-items-center gap-5">
           <li

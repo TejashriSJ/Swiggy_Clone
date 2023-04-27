@@ -2,11 +2,11 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div className="bg-black pt-4 w-100">
+    <div className="bg-black pt-4 w-100 d-none d-lg-block">
       <div className="container p-2">
         <div>
           <div>
-            <div className="d-flex flex-wrap justify-content-between ">
+            <div className="d-xl-flex flex-wrap justify-content-between flex-column flex-xl-row  ">
               <ul className="text-light">
                 <small className="text-secondary">COMPANY</small>
                 <li>About us</li>
@@ -41,7 +41,7 @@ function Footer() {
                 </li>
               </ul>
 
-              <div className="d-flex flex-column">
+              <div className="d-xl-flex d-md-flex align-items-start justify-content-start flex-md-column">
                 <img
                   alt=""
                   className="mb-4 ml-4"

@@ -13,3 +13,9 @@
 .items-header {
   gap: 10rem;
 }
+@media (max-width: 1400px) {
+  .items-header {
+    gap: 2rem;
+    margin-left: 0rem;
+  }
+}

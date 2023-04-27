@@ -11,7 +11,7 @@ function Header() {
   return (
     <div>
       <nav>
-        <div className="container header d-flex align-items-center justify-content-between">
+        <div className="container header d-none  d-lg-flex align-items-center align-self-xl-center align-self-lg-start justify-content-xl-between justify-content-lg-start">
           <div className="d-flex align-items-center gap-2 ">
             <Link to="/">
               <img
