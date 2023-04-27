@@ -1,4 +1,3 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Header from "./component/Header/index";
 import MobileViewHeader from "./component/Header/MobileViewHeader";
@@ -9,10 +8,11 @@ import ItemsHeader from "./component/ItemsHeader";
 import Restaurants from "./component/Restaurants";
 
 import RouteNotFound from "./component/RouteNotFound/index";
+import "./App.css";
 
 function App() {
   return (
-    <body>
+    <>
       <Routes>
         <Route
           path="/"
@@ -30,7 +30,7 @@ function App() {
         ></Route>
         <Route path="*" element={<RouteNotFound />} />
       </Routes>
-    </body>
+    </>
   );
 }
 

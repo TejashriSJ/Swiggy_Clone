@@ -12,7 +12,7 @@ function Restaurants() {
       <p className="d-lg-none ps-2 text-secondary">
         Discover unique tastes near you
       </p>
-      <div className="d-flex  restaurants justify-content-center align-items-center gap-5 flex-wrap mt-2">
+      <div className="d-flex   restaurants justify-content-center align-items-center gap-5 flex-wrap mt-2">
         {restaurantData.map((restaurant) => {
           return (
             <DisplayRestaurantDetails

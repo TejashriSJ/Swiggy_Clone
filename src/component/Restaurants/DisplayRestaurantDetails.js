@@ -6,7 +6,7 @@ function DisplayRestaurantDetails(props) {
 
   return (
     <div className="card">
-      <img className="card-img-top" src={image_url} alt="card image" />
+      <img className="card-img-top " src={image_url} alt="card " />
       <div className="card-body">
         <h6 className="card-title">{title}</h6>
         <i class="fa-solid fa-period fa-2xs" style={{ color: "#050505" }}></i>
