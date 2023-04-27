@@ -2,11 +2,7 @@
   padding: 1rem;
   gap: 20rem;
 }
-@media (max-width: 1400px) {
-  .header {
-    gap: 3rem;
-  }
-}
+
 .navbar-brand:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -18,6 +14,15 @@
 }
 li:hover {
   color: #fc8019;
+}
+
+/* mobile header */
+.mobile-header {
+  border-bottom: 1px solid rgb(228, 220, 220);
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 2;
 }
 
 /* form */
@@ -49,6 +54,9 @@ li:hover {
 .form-control:focus {
   box-shadow: none;
   border: 1px solid rgb(194, 192, 192);
+}
+.referalTxt:hover {
+  color: #0d6efd;
 }
 
 .btn {
@@ -83,4 +91,10 @@ li:hover {
 }
 a:hover {
   color: white;
+}
+
+@media (max-width: 1400px) {
+  .header {
+    gap: 3rem;
+  }
 }

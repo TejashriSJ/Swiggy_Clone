@@ -25,3 +25,8 @@
   background-color: #48c479;
   color: white;
 }
+@media (max-width: 1400px) {
+  .restaurant-block {
+    padding-top: 7rem;
+  }
+}

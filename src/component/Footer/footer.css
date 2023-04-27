@@ -8,3 +8,16 @@ li {
   list-style: none;
   cursor: pointer;
 }
+/* mobile footer */
+.mobile-footer {
+  border-top: 1px solid rgb(212, 208, 208);
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+}
+.mobile-footer p {
+  font-size: 0.6rem;
+  color: gray;
+  cursor: pointer;
+}

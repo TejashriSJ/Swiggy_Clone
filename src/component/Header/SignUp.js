@@ -85,6 +85,7 @@ function SignUp(props) {
       formData.phoneNumber.length === 10 &&
       validator.isAlpha(formData.name) &&
       validator.isEmail(formData.email) &&
+      formData.phoneNumber[0] !== "0" &&
       validator.isMobilePhone(formData.phoneNumber)
     ) {
       setIsFormSubmit(true);
@@ -181,6 +182,9 @@ function SignUp(props) {
             </div>
           </div>
           <div className="d-flex flex-column">
+            <a href="#" className="text-decoration-none referalTxt p-2">
+              Have a referal code?
+            </a>
             <button
               type="submit"
               className="btn text-light m-2 "
@@ -188,10 +192,6 @@ function SignUp(props) {
             >
               CONTINUE
             </button>
-
-            <a href="#" className="text-decoration-none p-2">
-              Have a referal code?
-            </a>
 
             <small className="text-secondary p-1">
               By creating an account,I accept the
