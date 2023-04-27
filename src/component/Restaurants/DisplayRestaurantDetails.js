@@ -1,8 +1,22 @@
+import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 import "./restaurant.css";
+import { useEffect } from "react";
 
 function DisplayRestaurantDetails(props) {
   const { title, categories, rating, delivery_time, price, image_url } =
     props.restaurant;
+
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  const sortType = params.get("sortBy");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: sortType });
+    console.log("dispatched");
+  }, [sortType]);
 
   return (
     <div className="card">

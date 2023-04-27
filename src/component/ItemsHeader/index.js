@@ -21,7 +21,8 @@ function ItemsHeader() {
           <li
             className="nav-link"
             onClick={() => {
-              dispatch({ type: SORT_BY_RELEVANCE });
+              //dispatch({ type: SORT_BY_RELEVANCE });
+              navigate("/?sortBy=RELEVANCE");
             }}
           >
             {" "}
@@ -30,7 +31,8 @@ function ItemsHeader() {
           <li
             className="nav-link"
             onClick={() => {
-              dispatch({ type: SORT_BY_DELIVERY_TIME });
+              //dispatch({ type: SORT_BY_DELIVERY_TIME });
+              navigate("/?sortBy=DELIVERY_TIME");
             }}
           >
             {" "}
@@ -39,9 +41,10 @@ function ItemsHeader() {
           <li
             className="nav-link"
             onClick={() => {
-              dispatch({
-                type: SORT_BY_RATING,
-              });
+              // dispatch({
+              //   type: SORT_BY_RATING,
+              // });
+              navigate("/?sortBy=RATING");
             }}
           >
             {" "}
@@ -50,9 +53,10 @@ function ItemsHeader() {
           <li
             className="nav-link"
             onClick={() => {
-              dispatch({
-                type: SORT_BY_COST_ASCENDING,
-              });
+              // dispatch({
+              //   type: SORT_BY_COST_ASCENDING,
+              // });
+              navigate("/?sortBy=COST_FOR_TWO");
             }}
           >
             {" "}
@@ -61,9 +65,10 @@ function ItemsHeader() {
           <li
             className="nav-link"
             onClick={() => {
-              dispatch({
-                type: SORT_BY_COST_DESCENDING,
-              });
+              // dispatch({
+              //   type: SORT_BY_COST_DESCENDING,
+              // });
+              navigate("/?sortBy=COST_FOR_TWO_H2L");
             }}
           >
             {" "}
