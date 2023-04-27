@@ -108,7 +108,7 @@ function SignIn(props) {
                 <div className="d-flex flex-column align-items-center justify-content-center">
                   <p className="text-success">Login Successfull</p>
                   <Link to="/" style={{ textDecoration: "none" }}>
-                    <button className="btn " onClick={onClickOk}>
+                    <button className="btn prompt" onClick={onClickOk}>
                       OK
                     </button>
                   </Link>

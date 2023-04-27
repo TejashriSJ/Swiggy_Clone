@@ -14,10 +14,10 @@ function ItemsHeader() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <nav className=" navbar d-flex justify-content-between   navbar-expand mt-5 ">
-      <h3 className="me-2">Restaurants</h3>
-      <div className=" sortBar container">
-        <ul className=" navbar-nav text-dark">
+    <nav className="d-flex align-self-start  items-header  align-items-center mt-5 ">
+      <h3 className="restaurent-heading">Restaurants </h3>
+      <div className=" sortBar container d-flex ">
+        <ul className=" text-dark d-flex  align-items-center gap-5">
           <li
             className="nav-link"
             onClick={() => {

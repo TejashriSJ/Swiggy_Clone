@@ -625,8 +625,7 @@ const Restaurant = [
   },
   {
     title: "Hotel Tulip continental",
-    categories:
-      "Chinese, South Indian, North Indian, Continental, American, Desserts, Fast Food,...",
+    categories: "Chinese, South Indian, Desserts, Fast Food",
     rating: "4.5",
     delivery_time: "31",
     price: "500",
