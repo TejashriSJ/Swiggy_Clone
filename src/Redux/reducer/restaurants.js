@@ -10,8 +10,6 @@ import {
 const initRestaurents = { Restaurant };
 
 const Restaurants = (state = initRestaurents, action) => {
-  console.log("state", state);
-  console.log("action type", action.type);
   switch (action.type) {
     case RELEVANCE:
       return { Restaurant: initRestaurents.Restaurant };

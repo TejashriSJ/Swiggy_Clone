@@ -1,10 +1,25 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { ADD_TO_CART } from "../../Redux/actionTypes";
+import { useSelector } from "react-redux";
+import {
+  ADD_TO_CART,
+  DECREASE_QUANTITY,
+  INCREASE_QUANTITY,
+} from "../../Redux/actionTypes";
 
 function DisplayAllItems(props) {
   const { name, price, img_url, veg, best_seller, category } = props.item;
-  const [addBtnstatus, setAddBtnStatus] = useState(false);
+
+  const cartData = useSelector((state) => {
+    return state.cart.cartItems;
+  });
+
+  const presentItem = cartData.find((item) => {
+    return item.name === name;
+  });
+
+  const [addBtnstatus, setAddBtnStatus] = useState(presentItem ? true : false);
+
   const dispatch = useDispatch();
 
   const onClickAdd = () => {
@@ -18,6 +33,23 @@ function DisplayAllItems(props) {
     });
   };
 
+  const incrementCount = () => {
+    dispatch({
+      type: INCREASE_QUANTITY,
+      payload: name,
+    });
+  };
+
+  const decrementCount = () => {
+    if (presentItem.quantity > 1) {
+      dispatch({
+        type: DECREASE_QUANTITY,
+        payload: name,
+      });
+    } else {
+      setAddBtnStatus(false);
+    }
+  };
   return (
     <>
       <div className="item d-flex">
@@ -59,9 +91,9 @@ function DisplayAllItems(props) {
             )}
             {addBtnstatus && (
               <div className="counter d-flex  p-2 text-success">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button onClick={decrementCount}>-</button>
+                <span>{presentItem.quantity}</span>
+                <button onClick={incrementCount}>+</button>
               </div>
             )}
           </div>

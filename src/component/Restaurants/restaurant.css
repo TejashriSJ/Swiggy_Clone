@@ -8,6 +8,7 @@
   padding: 1.5rem;
   border: 1px solid white;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .card img {
   border-radius: 0rem;

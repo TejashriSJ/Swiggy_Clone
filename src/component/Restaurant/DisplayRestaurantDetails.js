@@ -2,7 +2,7 @@ import DisplayAllItems from "./DisplayAllItems";
 
 function DisplayRestaurantDetails(props) {
   const { title, categories, rating, address, items } = props.restaurantDetails;
-  console.log(items, "items");
+
   return (
     <>
       <div className="d-flex restaurant-page flex-column align-items-center">

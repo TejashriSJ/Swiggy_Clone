@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+
 import Header from "./component/Header/index";
 import MobileViewHeader from "./component/Header/MobileViewHeader";
 import MobileFooter from "./component/Footer/MobileFooter";
@@ -10,6 +11,7 @@ import Restaurant from "./component/Restaurant";
 import SearchRestaurants from "./component/SearchRestaurents/index";
 
 import RouteNotFound from "./component/RouteNotFound/index";
+
 import "./App.css";
 
 function App() {
