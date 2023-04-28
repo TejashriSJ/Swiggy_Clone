@@ -6,6 +6,8 @@ import Footer from "./component/Footer/index";
 import PromotionBlock from "./component/PromotionBlock";
 import ItemsHeader from "./component/ItemsHeader";
 import Restaurants from "./component/Restaurants";
+import Restaurant from "./component/Restaurant";
+import SearchRestaurants from "./component/SearchRestaurents/index";
 
 import RouteNotFound from "./component/RouteNotFound/index";
 import "./App.css";
@@ -17,7 +19,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="App">
+            <div className="Home-page">
               <Header />
               <MobileViewHeader />
               <PromotionBlock />
@@ -26,6 +28,17 @@ function App() {
               <Footer />
               <MobileFooter />
             </div>
+          }
+        ></Route>
+        <Route path="/restaurants/:name" element={<Restaurant />}></Route>
+        <Route
+          path="/search"
+          element={
+            <>
+              <Header />
+              <SearchRestaurants />
+              <Footer />
+            </>
           }
         ></Route>
         <Route path="*" element={<RouteNotFound />} />

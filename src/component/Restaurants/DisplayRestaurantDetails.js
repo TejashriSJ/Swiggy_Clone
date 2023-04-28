@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import "./restaurant.css";
 import { useEffect } from "react";
@@ -8,18 +9,25 @@ function DisplayRestaurantDetails(props) {
   const { title, categories, rating, delivery_time, price, image_url } =
     props.restaurant;
 
+  const navigate = useNavigate();
   const { search } = useLocation();
   const params = new URLSearchParams(search);
   const sortType = params.get("sortBy");
   const dispatch = useDispatch();
 
+  let restaurantUrl = title.toLowerCase().replaceAll(" ", "-");
+
   useEffect(() => {
     dispatch({ type: sortType });
-    console.log("dispatched");
   }, [sortType]);
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        navigate(`restaurants/${restaurantUrl}`);
+      }}
+    >
       <img className="card-img-top " src={image_url} alt="card " />
       <div className="card-body">
         <h6 className="card-title">{title}</h6>

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import DisplayRestaurantDetails from "./DisplayRestaurantDetails";
 
 function Restaurants() {
-  const restaurantData = useSelector((state) => {
+  const restaurantsData = useSelector((state) => {
     return state.restaurants.Restaurant;
   });
 
@@ -13,7 +13,7 @@ function Restaurants() {
         Discover unique tastes near you
       </p>
       <div className="d-flex   restaurants justify-content-center align-items-center gap-5 flex-wrap mt-2">
-        {restaurantData.map((restaurant) => {
+        {restaurantsData.map((restaurant) => {
           return (
             <DisplayRestaurantDetails
               key={restaurant.title}
