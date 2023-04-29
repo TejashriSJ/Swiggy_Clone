@@ -1,13 +1,15 @@
-import swiggyLogo from "../../swiggy.svg";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import "./header.css";
-import { useState } from "react";
+import swiggyLogo from "../../swiggy.svg";
 
 function Header() {
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
-
+  const navigate = useNavigate();
   return (
     <div>
       <nav>
@@ -68,7 +70,12 @@ function Header() {
                   Sign In
                 </span>{" "}
               </li>
-              <li className="d-flex align-items-center gap-1">
+              <li
+                className="d-flex align-items-center gap-1"
+                onClick={() => {
+                  navigate("/checkout");
+                }}
+              >
                 <i
                   class="fa-solid fa-cart-shopping fa-sm"
                   style={{ color: "#000000" }}

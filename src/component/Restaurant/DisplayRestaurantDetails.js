@@ -25,7 +25,11 @@ function DisplayRestaurantDetails(props) {
         <div className="all-items">
           {items.map((item) => {
             return (
-              <DisplayAllItems key={item.name} item={item} restaurant={title} />
+              <DisplayAllItems
+                key={item.name + title}
+                item={item}
+                restaurant={title}
+              />
             );
           })}
         </div>

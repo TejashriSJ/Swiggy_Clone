@@ -1,0 +1,72 @@
+.cart-header {
+  gap: 40rem;
+}
+.cart-header img {
+  cursor: pointer;
+}
+.cart-header img:hover {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
+.empty-cart {
+  background-color: rgb(253, 249, 249);
+  width: 100%;
+}
+.empty-cart-image {
+  background-image: url("./empty_cart.webp");
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 50rem;
+  background-position: center;
+}
+.empty-cart button:hover {
+  color: white;
+  background-color: #fc8019;
+}
+
+/*cart */
+.cart-page {
+  background-color: rgb(236, 233, 233);
+}
+.payment-page {
+  background-color: white;
+  border: 1px solid rgb(223, 212, 212);
+  margin: 1rem;
+}
+.cart-details {
+  margin: 1rem;
+}
+
+.restaurant-image {
+  height: 5rem;
+  border-bottom: none;
+}
+.cart-details {
+  border: 1px solid rgb(223, 212, 212);
+  background-color: white;
+}
+.cart-footer {
+  border-top: 2px solid rgb(48, 47, 47);
+  padding: 1rem;
+}
+/*  individual item */
+.each-item {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  border: 1px solid white;
+  box-shadow: 1rem 1rem 1rem rgb(247, 245, 245);
+}
+.button {
+  width: 5rem;
+  align-items: center;
+  border: 1px solid rgb(230, 223, 223);
+}
+.button button {
+  background-color: white;
+  border: none;
+}
+@media (max-width: 1400px) {
+  .cart-header {
+    gap: 25rem;
+  }
+}

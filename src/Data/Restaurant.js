@@ -178,26 +178,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -389,26 +370,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -435,86 +397,6 @@ const Restaurant = [
     address: "Old Bhilwara, Old Bhilwara",
     categoriesList: ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
     items: [
-      {
-        category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -586,16 +468,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -656,16 +529,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -774,36 +638,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -812,46 +646,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -923,16 +718,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -993,16 +779,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -1274,26 +1051,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -1485,26 +1243,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -1533,36 +1272,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -1571,46 +1280,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -1682,16 +1352,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -1752,16 +1413,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -1883,16 +1535,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Aloo Tikki With Choley",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Recommended",
         name: "Choley Bhature",
@@ -2033,26 +1676,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -2081,36 +1705,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -2119,46 +1713,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -2230,16 +1785,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -2300,16 +1846,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -2418,36 +1955,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -2456,46 +1963,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -2567,16 +2035,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -2637,16 +2096,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -2918,26 +2368,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -2966,36 +2397,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -3004,46 +2405,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -3115,16 +2477,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",
@@ -3185,16 +2538,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Burgers",
-        name: "Chicken Burger",
-        price: 95,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/vwqswu6sdtiqw4qgmhoo",
-        veg: false,
-        best_seller: false,
-      },
+
       {
         category: "Burgers",
         name: "Mutton Burger",
@@ -3306,16 +2650,6 @@ const Restaurant = [
       "Indian Snacks",
     ],
     items: [
-      {
-        category: "Recommended",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: true,
-      },
       {
         category: "Recommended",
         name: "Aloo Tikki With Choley",
@@ -3466,26 +2800,7 @@ const Restaurant = [
         veg: true,
         best_seller: false,
       },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Dahi",
-        price: 125,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/f6ltzgp7iwmdx6saylwf",
-        veg: true,
-        best_seller: false,
-      },
-      {
-        category: "Indian Snacks",
-        name: "Aloo Tikki With Choley",
-        price: 145,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/wqrysplo0yzelnojrsrr",
-        veg: true,
-        best_seller: false,
-      },
+
       {
         category: "Indian Snacks",
         name: "Bhalla Papdi",
@@ -3514,36 +2829,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Burger Meal",
-        price: 145,
-        description: "Burger, coco cola and french fries.",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/zu4nv8n3x82yvqg2lh47",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Burger With Cheese",
-        price: 75,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/tet5mv0m7f3h7cf5sr2u",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Burger",
-        price: 85,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/xqdtefnghjsvin6txrf5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Burger",
         price: 95,
         description: "",
@@ -3552,46 +2837,7 @@ const Restaurant = [
         veg: false,
         best_seller: false,
       },
-      {
-        category: "Recommended",
-        name: "Mutton Burger",
-        price: 115,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ogbet6tawbzh9hea5yx8",
-        veg: false,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Veg Grilled Sandwich",
-        price: 80,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ap7akx97uejjsnrqkysa",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Paneer Grilled Sandwich",
-        price: 100,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/yximgycbpooveluistv5",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
-        name: "Chicken Grilled Sandwich",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/sftdzwl3qgoa70fwr9rw",
-        veg: false,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Veg Regular Hot & Spicy",
@@ -3663,16 +2909,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Pizzas",
-        name: "Regular Paneer Cheese Onion Capsicum",
-        price: 105,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7we8fm43sq2mqasdrux",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Pizzas",
         name: "Regular Paneer Cheese Onion Capsicum",

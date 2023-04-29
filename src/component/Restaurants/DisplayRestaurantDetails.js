@@ -1,9 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import "./restaurant.css";
-import { useEffect } from "react";
 
 function DisplayRestaurantDetails(props) {
   const { title, categories, rating, delivery_time, price, image_url } =

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+
 import swiggyLogo from "../../swiggy.svg";
 import "./rootNotFound.css";
+
 function RouteNotFound() {
   return (
     <div>

@@ -1,4 +1,5 @@
 import "./header.css";
+
 function MobileViewHeader() {
   return (
     <div className="mobile-header align-self-start p-2 w-100  d-flex d-lg-none align-items-center justify-content-between">

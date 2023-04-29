@@ -1,5 +1,7 @@
-import "./footer.css";
 import { Link } from "react-router-dom";
+
+import "./footer.css";
+
 function MobileFooter() {
   return (
     <div className="mobile-footer align-self-start p-2 w-100 d-lg-none d-flex align-items-center justify-content-around">

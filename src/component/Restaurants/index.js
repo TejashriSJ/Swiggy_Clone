@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+
 import DisplayRestaurantDetails from "./DisplayRestaurantDetails";
 
 function Restaurants() {

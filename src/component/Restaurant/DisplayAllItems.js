@@ -9,16 +9,23 @@ import {
 
 function DisplayAllItems(props) {
   const { name, price, img_url, veg, best_seller, category } = props.item;
+  const restaurant = props.restaurant;
 
   const cartData = useSelector((state) => {
     return state.cart.cartItems;
+  });
+
+  const cartRestaurant = useSelector((state) => {
+    return state.cart.restaurantName;
   });
 
   const presentItem = cartData.find((item) => {
     return item.name === name;
   });
 
-  const [addBtnstatus, setAddBtnStatus] = useState(presentItem ? true : false);
+  const [addBtnstatus, setAddBtnStatus] = useState(
+    presentItem && cartRestaurant === restaurant ? true : false
+  );
 
   const dispatch = useDispatch();
 
@@ -27,8 +34,8 @@ function DisplayAllItems(props) {
     dispatch({
       type: ADD_TO_CART,
       payload: {
-        item: { ...props.item, quantity: 1 },
-        restaurant: props.restaurant,
+        item: { ...props.item, quantity: 1, totalAmount: props.item.price },
+        restaurant: restaurant,
       },
     });
   };
