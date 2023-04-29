@@ -1,6 +1,6 @@
 .header {
   padding: 1rem;
-  gap: 20rem;
+  gap: 18rem;
 }
 
 .navbar-brand:hover {
@@ -92,6 +92,17 @@ li:hover {
 }
 a:hover {
   color: white;
+}
+
+.blur-login-bg {
+  position: absolute;
+  width: 20rem;
+  border: 1px solid rgb(224, 214, 214);
+  top: 13rem;
+  right: 4rem;
+  padding: 2rem;
+  background-color: white;
+  z-index: 2;
 }
 
 @media (max-width: 1400px) {

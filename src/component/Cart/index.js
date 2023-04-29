@@ -28,9 +28,9 @@ function Cart() {
       <CartHeader />
       {cartItems.length === 0 && <EmptyCart />}
       {cartItems.length !== 0 && (
-        <div className="container">
+        <div className="container ">
           <div className="row">
-            <div className="col-5 payment-page">
+            <div className="col-6 payment-page">
               <div className="p-3 mb-4 mt-4">
                 <h4>Account</h4>
                 <p>
@@ -67,7 +67,13 @@ function Cart() {
               })}
               <div className="cart-footer d-flex align-items-center justify-content-around">
                 <h5>To Pay: </h5>
-                <b>{totalAmountToPay}</b>
+                <b>
+                  <i
+                    class="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
+                    style={{ color: "#000000;" }}
+                  ></i>{" "}
+                  {totalAmountToPay}
+                </b>
               </div>
             </div>
           </div>

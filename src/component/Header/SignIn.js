@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import validator from "validator";
 import { Link } from "react-router-dom";
 
@@ -17,6 +18,11 @@ function SignIn(props) {
     }
     setFormLabel({ phoneNumber: "Phone Number" });
   };
+
+  const registerdUsers = useSelector((state) => {
+    return state.user.users;
+  });
+
   const formOnSubmit = (event) => {
     event.preventDefault();
 
@@ -29,7 +35,13 @@ function SignIn(props) {
         phoneNumber: <p className="text-danger">Invalid Mobile Number</p>,
       });
     } else {
-      setIsFormSubmit(true);
+      if (Object.keys(registerdUsers).includes(formData.phoneNumber)) {
+        props.setLogedInUser(registerdUsers[formData.phoneNumber].name);
+        props.setLogOutStatus(true);
+        setIsFormSubmit(true);
+      } else {
+        props.setBtnStatus({ signUp: true, signIn: false });
+      }
     }
   };
 

@@ -9,6 +9,10 @@ import swiggyLogo from "../../swiggy.svg";
 
 function Header() {
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
+  const [logInStatus, setLogInStatus] = useState(false);
+  const [logedInUser, setLogedInUser] = useState("Sign In");
+  const [logoutStatus, setLogOutStatus] = useState(false);
+
   const navigate = useNavigate();
   return (
     <div>
@@ -64,12 +68,26 @@ function Header() {
                 ></i>{" "}
                 <span
                   onClick={() => {
-                    setBtnStatus({ signIn: true, signUp: false });
+                    if (logedInUser === "Sign In") {
+                      setBtnStatus({ signIn: true, signUp: false });
+                    } else {
+                      setLogOutStatus(true);
+                    }
                   }}
                 >
-                  Sign In
+                  {logedInUser}
                 </span>{" "}
               </li>
+              {logoutStatus && (
+                <li
+                  onClick={() => {
+                    setLogOutStatus(false);
+                    setLogedInUser("Sign In");
+                  }}
+                >
+                  Log Out
+                </li>
+              )}
               <li
                 className="d-flex align-items-center gap-1"
                 onClick={() => {
@@ -88,8 +106,19 @@ function Header() {
       </nav>
       {(btnStatus.signIn || btnStatus.signUp) && (
         <div className="background-blur">
-          {btnStatus.signIn && <SignIn setBtnStatus={setBtnStatus} />}
-          {btnStatus.signUp && <SignUp setBtnStatus={setBtnStatus} />}
+          {btnStatus.signIn && (
+            <SignIn
+              setBtnStatus={setBtnStatus}
+              setLogedInUser={setLogedInUser}
+              setLogOutStatus={setLogOutStatus}
+            />
+          )}
+          {btnStatus.signUp && (
+            <SignUp
+              setBtnStatus={setBtnStatus}
+              setLogedInUser={setLogedInUser}
+            />
+          )}
         </div>
       )}
     </div>

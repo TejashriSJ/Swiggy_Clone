@@ -6,14 +6,29 @@ import {
 } from "../../Redux/actionTypes";
 
 function CartItems(props) {
-  const { name, price, quantity } = props.item;
+  const { name, price, quantity, veg } = props.item;
   const dispatch = useDispatch();
 
   return (
     <>
       <div className="d-flex each-item">
         <div className="cart-section d-flex align-items-center justify-content-between w-100">
-          <h6 className="w-5">{name}</h6>
+          <div className="d-flex gap-2">
+            {veg && (
+              <i
+                className="veg-logo align-self-start fa-solid fa-circle fa-2xs"
+                style={{ color: "green" }}
+              ></i>
+            )}
+            {!veg && (
+              <i
+                className="non-veg-logo align-self-start fa-solid fa-circle fa-2xs"
+                style={{ color: "red" }}
+              ></i>
+            )}
+            <h6 className="w-5">{name}</h6>
+          </div>
+
           <div className="d-flex g-5 mr-5">
             <div className="button d-flex align-items-center justify-content-around">
               <button
@@ -36,7 +51,13 @@ function CartItems(props) {
                 +
               </button>
             </div>
-            <b className="ms-5">{price * quantity}</b>
+            <b className="ms-5">
+              <i
+                class="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
+                style={{ color: "#000000;" }}
+              ></i>{" "}
+              {price * quantity}
+            </b>
           </div>
         </div>
       </div>

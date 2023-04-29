@@ -8,3 +8,6 @@ export const ADD_TO_CART = "ADD_TO_CART";
 export const INCREASE_QUANTITY = "INCREASE_QUANTITY";
 export const DECREASE_QUANTITY = "DECREASE_QUANTITY";
 export const REMOVE_ITEM = "REMOVE_ITEM";
+
+export const ADD_USER = "ADD_USER";
+export const REMOVE_USER = "REMOVE_USER";

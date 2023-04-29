@@ -1,8 +1,11 @@
 import { useState } from "react";
-import validator from "validator";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import validator from "validator";
+import { ADD_USER } from "../../Redux/actionTypes";
 
 function SignUp(props) {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -89,6 +92,14 @@ function SignUp(props) {
       validator.isMobilePhone(formData.phoneNumber)
     ) {
       setIsFormSubmit(true);
+      dispatch({
+        type: ADD_USER,
+        payload: {
+          name: formData.name,
+          email: formData.email,
+          phoneNo: formData.phoneNumber,
+        },
+      });
     }
     event.preventDefault();
   };

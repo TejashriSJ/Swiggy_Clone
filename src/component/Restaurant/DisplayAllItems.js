@@ -27,9 +27,31 @@ function DisplayAllItems(props) {
     presentItem && cartRestaurant === restaurant ? true : false
   );
 
+  console.log(cartRestaurant, "restaurant");
+  const [isRestaurantChanged, setIsRestaurantChanged] = useState(false);
+
   const dispatch = useDispatch();
 
   const onClickAdd = () => {
+    if (cartRestaurant !== restaurant && cartRestaurant !== "") {
+      setIsRestaurantChanged(true);
+    } else {
+      setAddBtnStatus(true);
+      dispatch({
+        type: ADD_TO_CART,
+        payload: {
+          item: { ...props.item, quantity: 1, totalAmount: props.item.price },
+          restaurant: restaurant,
+        },
+      });
+    }
+  };
+
+  const onClickNo = () => {
+    setIsRestaurantChanged(false);
+  };
+  const onClickYes = () => {
+    setIsRestaurantChanged(false);
     setAddBtnStatus(true);
     dispatch({
       type: ADD_TO_CART,
@@ -63,9 +85,15 @@ function DisplayAllItems(props) {
         <div className="item-description">
           <div className="mb-2">
             {veg ? (
-              <b className="text-success">Veg</b>
+              <i
+                class="veg-logo fa-solid fa-circle fa-2xs"
+                style={{ color: "green" }}
+              ></i>
             ) : (
-              <b className="text-danger">Non Veg</b>
+              <i
+                class="non-veg-logo fa-solid fa-circle fa-2xs"
+                style={{ color: "red" }}
+              ></i>
             )}{" "}
             {best_seller && (
               <>
@@ -106,6 +134,26 @@ function DisplayAllItems(props) {
           </div>
         </div>
       </div>
+      {isRestaurantChanged && (
+        <div className="promptForChangingRestaurant d-flex flex-column justify-content-between p-5">
+          <div>
+            <h4>Items already in cart</h4>
+            <p>
+              Your cart contains items from other restaurant. Would you like to
+              reset your cart for adding items from this restaurant?
+            </p>
+          </div>
+
+          <div className="d-flex gap-5">
+            <button className="no-btn" onClick={onClickNo}>
+              NO
+            </button>
+            <button className="yes-btn" onClick={onClickYes}>
+              YES, START AFRESH
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

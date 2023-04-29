@@ -23,6 +23,18 @@
   top: -3rem;
   left: 3rem;
 }
+.veg-logo {
+  border: 1px solid green;
+  padding: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+.non-veg-logo {
+  border: 1px solid rgb(201, 13, 13);
+  padding: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .add-btn {
   width: 8rem;
   border: none;
@@ -41,4 +53,30 @@
   color: green;
   background-color: white;
   font-weight: 500;
+}
+.promptForChangingRestaurant {
+  position: fixed;
+  z-index: 2;
+  left: 30vw;
+  top: 60vh;
+  width: 40rem;
+  background-color: white;
+  border: 1px solid rgb(199, 190, 190);
+  box-shadow: 1rem 1rem 1rem rgb(223, 217, 217);
+}
+.promptForChangingRestaurant button {
+  width: 15rem;
+  padding: 1rem;
+}
+.yes-btn {
+  color: white;
+  font-weight: bold;
+  background-color: green;
+  border: none;
+}
+.no-btn {
+  color: green;
+  font-weight: bold;
+  border: 3px solid green;
+  background-color: white;
 }
