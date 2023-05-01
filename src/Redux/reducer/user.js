@@ -1,12 +1,11 @@
-import { ADD_USER, REMOVE_USER } from "../actionTypes";
+import { ADD_USER, LOG_IN, LOG_OUT } from "../actionTypes";
 
-const initUser = { users: {} };
+const initUser = { users: {}, loggedInUser: "Sign In" };
 
 const user = (state = initUser, action) => {
   console.log("user added");
   switch (action.type) {
     case ADD_USER:
-      console.log("phone number", action.payload.phoneNo);
       return {
         ...state,
         users: {
@@ -16,6 +15,16 @@ const user = (state = initUser, action) => {
             email: action.payload.email,
           },
         },
+      };
+    case LOG_IN:
+      return {
+        ...state,
+        loggedInUser: action.payload,
+      };
+    case LOG_OUT:
+      return {
+        ...state,
+        loggedInUser: "Sign In",
       };
 
     default:

@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
   ADD_TO_CART,
+  REMOVE_ITEM,
   DECREASE_QUANTITY,
   INCREASE_QUANTITY,
 } from "../../Redux/actionTypes";
@@ -77,6 +78,10 @@ function DisplayAllItems(props) {
       });
     } else {
       setAddBtnStatus(false);
+      dispatch({
+        type: REMOVE_ITEM,
+        payload: name,
+      });
     }
   };
   return (

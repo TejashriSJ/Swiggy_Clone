@@ -1,17 +1,34 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
+import { EMPTY_CART, LOG_OUT } from "../../Redux/actionTypes";
 import "./header.css";
 import swiggyLogo from "../../swiggy.svg";
 
 function Header() {
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
+  const logedInUser = useSelector((state) => {
+    return state.user.loggedInUser;
+  });
+  const registeredUsers = useSelector((state) => {
+    return state.user.users;
+  });
+
+  const dispatch = useDispatch();
+
   const [logInStatus, setLogInStatus] = useState(false);
-  const [logedInUser, setLogedInUser] = useState("Sign In");
   const [logoutStatus, setLogOutStatus] = useState(false);
+
+  const cartItems = useSelector((state) => {
+    return state.cart.cartItems;
+  });
+  let cartItemsCount = cartItems.reduce((count, item) => {
+    return (count += item.quantity);
+  }, 0);
 
   const navigate = useNavigate();
   return (
@@ -75,14 +92,18 @@ function Header() {
                     }
                   }}
                 >
-                  {logedInUser}
+                  {logedInUser === "Sign In"
+                    ? logedInUser
+                    : registeredUsers[logedInUser].name}
                 </span>{" "}
               </li>
               {logoutStatus && (
                 <li
                   onClick={() => {
                     setLogOutStatus(false);
-                    setLogedInUser("Sign In");
+                    dispatch({ type: LOG_OUT });
+                    dispatch({ type: EMPTY_CART });
+                    // setLogedInUser("Sign In");
                   }}
                 >
                   Log Out
@@ -98,6 +119,7 @@ function Header() {
                   class="fa-solid fa-cart-shopping fa-sm"
                   style={{ color: "#000000" }}
                 ></i>
+                <span className="cartItemsCount">{cartItemsCount}</span>
                 Cart
               </li>
             </ul>
@@ -109,14 +131,14 @@ function Header() {
           {btnStatus.signIn && (
             <SignIn
               setBtnStatus={setBtnStatus}
-              setLogedInUser={setLogedInUser}
+              //setLogedInUser={setLogedInUser}
               setLogOutStatus={setLogOutStatus}
             />
           )}
           {btnStatus.signUp && (
             <SignUp
               setBtnStatus={setBtnStatus}
-              setLogedInUser={setLogedInUser}
+              //setLogedInUser={setLogedInUser}
             />
           )}
         </div>

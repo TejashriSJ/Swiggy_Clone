@@ -16,6 +16,13 @@
 li:hover {
   color: #fc8019;
 }
+.cartItemsCount {
+  position: relative;
+  bottom: 0.5rem;
+  right: 0.2rem;
+  color: green;
+  font-weight: bold;
+}
 
 /* mobile header */
 .mobile-header {

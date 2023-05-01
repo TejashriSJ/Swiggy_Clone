@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import validator from "validator";
 import { Link } from "react-router-dom";
+import { LOG_IN } from "../../Redux/actionTypes";
 
 function SignIn(props) {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     phoneNumber: "",
   });
@@ -36,7 +38,11 @@ function SignIn(props) {
       });
     } else {
       if (Object.keys(registerdUsers).includes(formData.phoneNumber)) {
-        props.setLogedInUser(registerdUsers[formData.phoneNumber].name);
+        dispatch({
+          type: LOG_IN,
+          payload: formData.phoneNumber,
+        });
+        //props.setLogedInUser(registerdUsers[formData.phoneNumber].name);
         props.setLogOutStatus(true);
         setIsFormSubmit(true);
       } else {

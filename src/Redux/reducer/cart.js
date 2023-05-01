@@ -3,6 +3,7 @@ import {
   INCREASE_QUANTITY,
   DECREASE_QUANTITY,
   REMOVE_ITEM,
+  EMPTY_CART,
 } from "../actionTypes";
 
 const initCart = { cartItems: [], restaurantName: "" };
@@ -65,12 +66,19 @@ const Cart = (state = initCart, action) => {
 
     case REMOVE_ITEM:
       console.log(state.name);
+      let resetRestaurant =
+        state.cartItems.length === 1 ? "" : state.restaurantName;
+
       return {
         ...state,
         cartItems: state.cartItems.filter((item) => {
           return item.name !== action.payload;
         }),
+        restaurantName: resetRestaurant,
       };
+
+    case EMPTY_CART:
+      return initCart;
 
     default:
       return state;

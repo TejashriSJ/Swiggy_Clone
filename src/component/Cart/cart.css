@@ -13,7 +13,7 @@
   width: 100%;
 }
 .empty-cart-image {
-  background-image: url("./empty_cart.webp");
+  background-image: url("./images/empty_cart.webp");
   background-repeat: no-repeat;
   height: 30rem;
   width: 50rem;
@@ -26,7 +26,16 @@
 
 /*cart */
 .cart-page {
-  background-color: rgb(236, 233, 233);
+  background-color: rgb(255, 255, 255);
+}
+.account {
+  border: 1px solid rgb(228, 221, 221);
+  background-color: rgb(238, 229, 229);
+}
+.address {
+  min-height: 5rem;
+  border: 1px solid rgb(228, 221, 221);
+  background-color: rgb(238, 229, 229);
 }
 .payment-page {
   background-color: white;
@@ -36,6 +45,9 @@
 .cart-details {
   margin: 1rem;
 }
+.cart-items {
+  min-height: 50vh;
+}
 
 .restaurant-image {
   height: 5rem;
@@ -44,10 +56,29 @@
 .cart-details {
   border: 1px solid rgb(223, 212, 212);
   background-color: white;
+  min-height: 50vh;
 }
 .cart-footer {
   border-top: 2px solid rgb(48, 47, 47);
   padding: 1rem;
+}
+.payment {
+  min-height: 5rem;
+  border: 1px solid rgb(228, 221, 221);
+  background-color: rgb(238, 229, 229);
+}
+.payment button {
+  background-color: rgb(5, 143, 5);
+  color: white;
+  font-weight: 400;
+  padding: 0.4rem;
+  border: none;
+}
+.cash-on-delivery {
+  border: 1px solid green;
+  color: green;
+  padding: 0.3rem;
+  font-weight: 400;
 }
 /*  individual item */
 .each-item {
