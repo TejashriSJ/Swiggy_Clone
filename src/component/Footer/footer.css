@@ -15,6 +15,7 @@ li {
   bottom: 0;
   background-color: white;
   z-index: 2;
+  width: 100vw;
 }
 .mobile-footer p {
   font-size: 0.6rem;

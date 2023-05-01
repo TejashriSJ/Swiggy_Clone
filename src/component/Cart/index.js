@@ -12,6 +12,8 @@ import amazonPayLogo from "./images/amazonPay.jpeg";
 import googlePayLogo from "./images/googlePay.png";
 import phonePayLogo from "./images/phonePay.png";
 import "./cart.css";
+import MobileFooter from "../Footer/MobileFooter";
+import MobileViewHeader from "../Header/MobileViewHeader";
 
 function Cart() {
   const navigate = useNavigate();
@@ -63,13 +65,14 @@ function Cart() {
   return (
     <div className="cart-page d-flex align-items-center flex-column">
       <Header />
+      <MobileViewHeader />
       {cartItems.length === 0 && <EmptyCart />}
       {cartItems.length !== 0 && (
         <div className="container ">
           <div className="row">
-            <div className="col-6 payment-page">
+            <div className="col-lg-6 col-12 mt-5  mt-lg-3 ms-0  payment-page">
               {loggedInUser === "Sign In" ? (
-                <div className="p-3 mb-4 mt-4 account">
+                <div className="p-3 mb-4 mt-lg-4 mt-5 pt-5 account">
                   <h4>Account</h4>
                   <p>
                     To Place your order now, log in to your existing account or
@@ -77,7 +80,7 @@ function Cart() {
                   </p>
                 </div>
               ) : (
-                <div className="p-3 mb-4 mt-4 account">
+                <div className="p-3 mb-4 mt-5 mt-lg-4  account">
                   <h4>
                     Logged In{" "}
                     <span>
@@ -111,7 +114,7 @@ function Cart() {
                     <p>Select your payment method</p>
                     <div className="container ">
                       <div className="row">
-                        <div className="col-3">
+                        <div className="col-lg-3 col-5 mb-5">
                           <img
                             src={amazonPayLogo}
                             alt="amazon pay"
@@ -123,7 +126,7 @@ function Cart() {
                             PAY {totalAmountToPay}
                           </button>
                         </div>
-                        <div className="col-3">
+                        <div className="col-lg-3 col-5 mb-5">
                           <img
                             src={googlePayLogo}
                             alt="google pay"
@@ -136,7 +139,7 @@ function Cart() {
                             PAY {totalAmountToPay}
                           </button>
                         </div>
-                        <div className="col-3">
+                        <div className="col-lg-3 col-5 mb-2">
                           <img
                             src={phonePayLogo}
                             alt="phone pay"
@@ -149,7 +152,7 @@ function Cart() {
                             PAY {totalAmountToPay}
                           </button>
                         </div>
-                        <div className="col-2">
+                        <div className="col-lg-2 col-4">
                           <p
                             className="cash-on-delivery"
                             onClick={handleOnClickPay}
@@ -163,7 +166,7 @@ function Cart() {
                 )}
               </div>
             </div>
-            <div className="col-5 cart-details p-3">
+            <div className="col-lg-5 col-11  cart-details p-3">
               <div className=" mb-2 d-flex align-items-center justify-content-start gap-3">
                 <div className="">
                   <img
@@ -225,10 +228,8 @@ function Cart() {
                 style={{ color: "#008f18" }}
               ></i>
               <p>Thank You</p>
-              <b>Order Placed Successfully</b>
-              <p>
-                Enjoy Eating!! <span></span>
-              </p>
+              <b className="text-center">Order Placed Successfully</b>
+              <p>Enjoy Eating!!</p>
               <button
                 onClick={onClickOk}
                 className="btn btn-success p-2  w-100"
@@ -267,6 +268,7 @@ function Cart() {
       )}
 
       <Footer />
+      <MobileFooter />
     </div>
   );
 }

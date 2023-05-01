@@ -11,7 +11,7 @@ function CartItems(props) {
 
   return (
     <>
-      <div className="d-flex each-item">
+      <div className="d-flex each-item pt-4 pb-4 ">
         <div className="cart-section d-flex align-items-center justify-content-between w-100">
           <div className="d-flex gap-2">
             {veg && (

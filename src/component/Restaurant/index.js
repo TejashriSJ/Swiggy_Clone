@@ -3,7 +3,9 @@ import { useSelector } from "react-redux";
 
 import DisplayRestaurantDetails from "./DisplayRestaurantDetails";
 import Header from "../Header";
+import MobileViewHeader from "../Header/MobileViewHeader";
 import Footer from "../Footer";
+import MobileViewFooter from "../Footer/MobileFooter";
 
 import "./restaurant.css";
 
@@ -23,8 +25,10 @@ function Restaurant() {
   return (
     <>
       <Header />
+      <MobileViewHeader />
       <DisplayRestaurantDetails restaurantDetails={restaurantDetails} />
       <Footer />
+      <MobileViewFooter />
     </>
   );
 }

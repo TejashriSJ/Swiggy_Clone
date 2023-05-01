@@ -116,8 +116,9 @@
 }
 .payment-prompt {
   position: absolute;
-  top: 30vh;
-  left: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: fit-content;
   padding: 2rem;
   background-color: white;
@@ -127,7 +128,6 @@
 /*  individual item */
 .each-item {
   border-radius: 0.5rem;
-  padding: 2rem;
   border: 1px solid white;
   box-shadow: 1rem 1rem 1rem rgb(247, 245, 245);
 }
