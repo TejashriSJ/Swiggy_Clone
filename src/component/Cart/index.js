@@ -1,16 +1,21 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Footer from "../Footer";
 import CartHeader from "./CartHeader";
 import Header from "../Header";
 import CartItems from "./CartItems";
 import EmptyCart from "./EmptyCart";
-import "./cart.css";
+import { EMPTY_CART } from "../../Redux/actionTypes";
 import amazonPayLogo from "./images/amazonPay.jpeg";
 import googlePayLogo from "./images/googlePay.png";
 import phonePayLogo from "./images/phonePay.png";
+import "./cart.css";
 
 function Cart() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   let cartItems = useSelector((state) => {
     return state.cart.cartItems;
   });
@@ -33,6 +38,27 @@ function Cart() {
   let totalAmountToPay = cartItems.reduce((cost, item) => {
     return (cost += item.totalAmount);
   }, 0);
+
+  let [address, setAddress] = useState("");
+  let [payment, setPayment] = useState(false);
+  let [paymentBtn, setPaymentBtn] = useState(false);
+  let [yesBtnStatus, setYesBtnStatus] = useState(false);
+
+  const onProvideAddress = (event) => {
+    setAddress(event.target.value);
+  };
+
+  const handleOnClickPay = (event) => {
+    setPaymentBtn(true);
+    if (address !== "") {
+      setPayment(true);
+    }
+  };
+
+  const onClickOk = () => {
+    dispatch({ type: EMPTY_CART });
+    navigate("/");
+  };
 
   return (
     <div className="cart-page d-flex align-items-center flex-column">
@@ -74,6 +100,7 @@ function Cart() {
                   <textarea
                     className="form-control"
                     placeholder="Enter your address"
+                    onChange={onProvideAddress}
                   />
                 )}
               </div>
@@ -92,32 +119,43 @@ function Cart() {
                             style={{ objectFit: "contain" }}
                           />
                           <p>Amazon Pay</p>
-                          <button>PAY {totalAmountToPay}</button>
+                          <button onClick={handleOnClickPay}>
+                            PAY {totalAmountToPay}
+                          </button>
                         </div>
                         <div className="col-3">
                           <img
                             src={googlePayLogo}
-                            alt="amazon pay"
+                            alt="google pay"
                             height="30px"
                             style={{ objectFit: "contain" }}
                             className="mb-3"
                           />
                           <p>Google Pay</p>
-                          <button>PAY {totalAmountToPay}</button>
+                          <button onClick={handleOnClickPay}>
+                            PAY {totalAmountToPay}
+                          </button>
                         </div>
                         <div className="col-3">
                           <img
                             src={phonePayLogo}
-                            alt="amazon pay"
+                            alt="phone pay"
                             height="30px"
                             style={{ objectFit: "contain" }}
                             className="mb-3"
                           />
                           <p>Phone Pay</p>
-                          <button>PAY {totalAmountToPay}</button>
+                          <button onClick={handleOnClickPay}>
+                            PAY {totalAmountToPay}
+                          </button>
                         </div>
                         <div className="col-2">
-                          <p className="cash-on-delivery">Pay On Delivery</p>
+                          <p
+                            className="cash-on-delivery"
+                            onClick={handleOnClickPay}
+                          >
+                            Pay On Delivery
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -161,6 +199,73 @@ function Cart() {
           </div>
         </div>
       )}
+
+      {paymentBtn && (
+        <div className="background-blur">
+          {!payment && (
+            <div className="payment-prompt d-flex flex-column justify-content-between align-items-center">
+              <b className="text-danger">
+                {" "}
+                Please provide address to place order{" "}
+              </b>
+              <button
+                onClick={() => {
+                  setPaymentBtn(false);
+                }}
+                className="btn btn-success p-2 mt-3  w-100"
+              >
+                OK
+              </button>
+            </div>
+          )}
+          {payment && yesBtnStatus && (
+            <div className="payment-prompt d-flex flex-column justify-content-between align-items-center">
+              <i
+                className="fa-solid fa-circle-check fa-2xl mb-4"
+                style={{ color: "#008f18" }}
+              ></i>
+              <p>Thank You</p>
+              <b>Order Placed Successfully</b>
+              <p>
+                Enjoy Eating!! <span></span>
+              </p>
+              <button
+                onClick={onClickOk}
+                className="btn btn-success p-2  w-100"
+              >
+                OK
+              </button>
+            </div>
+          )}
+
+          {payment && !yesBtnStatus && (
+            <div className="payment-prompt d-flex flex-column justify-content-between align-items-center">
+              <p className="text-dark">
+                Are you sure you want to place the order?
+              </p>
+              <div className="d-flex gap-5">
+                <button
+                  className="btn yesBtn  btn-success"
+                  onClick={() => {
+                    setYesBtnStatus(true);
+                  }}
+                >
+                  Yes
+                </button>{" "}
+                <button
+                  className="btn noBtn btn-danger"
+                  onClick={() => {
+                    setPaymentBtn(false);
+                  }}
+                >
+                  No
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
       <Footer />
     </div>
   );
