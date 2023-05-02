@@ -8,6 +8,7 @@ import PromotionBlock from "./component/PromotionBlock";
 import ItemsHeader from "./component/ItemsHeader";
 import Restaurants from "./component/Restaurants";
 import Restaurant from "./component/Restaurant";
+import SearchRestaurants from "./component/SearchRestaurents";
 import Cart from "./component/Cart";
 
 import RouteNotFound from "./component/RouteNotFound/index";
@@ -34,6 +35,7 @@ function App() {
         ></Route>
         <Route path="/restaurants/:name" element={<Restaurant />}></Route>
         <Route path="/checkout" element={<Cart />} />
+        <Route path="/search" element={<SearchRestaurants />} />
         <Route path="*" element={<RouteNotFound />} />
       </Routes>
     </>

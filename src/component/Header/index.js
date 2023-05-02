@@ -60,7 +60,12 @@ function Header() {
 
           <div>
             <ul className="d-none-md text-dark d-flex align-items-center justify-content-center gap-5 ">
-              <li className="d-flex align-items-center gap-1 ">
+              <li
+                className="d-flex align-items-center gap-1 "
+                onClick={() => {
+                  navigate("/search");
+                }}
+              >
                 {" "}
                 <i
                   class="fa-solid fa-magnifying-glass fa-sm"

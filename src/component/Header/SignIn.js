@@ -58,7 +58,7 @@ function SignIn(props) {
 
   return (
     <>
-      <div className="container form ">
+      <div className="container form mw-100">
         <form className="d-flex flex-column close " onSubmit={formOnSubmit}>
           <big
             onClick={() => {

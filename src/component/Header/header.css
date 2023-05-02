@@ -104,10 +104,11 @@ a:hover {
 
 .blur-login-bg {
   position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -100%);
   width: 20rem;
   border: 1px solid rgb(224, 214, 214);
-  top: 13rem;
-  right: 4rem;
   padding: 2rem;
   background-color: white;
   z-index: 2;

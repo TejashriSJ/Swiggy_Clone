@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import validator from "validator";
 import { ADD_USER } from "../../Redux/actionTypes";
@@ -22,9 +22,14 @@ function SignUp(props) {
     phoneNumber: <p className="text-danger">Enter Your Phone Number</p>,
     name: <p className="text-danger">Invalid Name</p>,
     email: <p className="text-danger">Invalid Email Address</p>,
+    duplicateUser: <p className="text-danger">Mobile number already exist</p>,
   };
 
   const [labels, setLabels] = useState(initLabels);
+
+  const registeredUsers = useSelector((state) => {
+    return state.user.users;
+  });
 
   const onChangeInput = (event) => {
     setLabels({
@@ -81,7 +86,12 @@ function SignUp(props) {
   };
 
   const onFormSubmit = (event) => {
-    if (
+    if (Object.keys(registeredUsers).includes(formData.phoneNumber)) {
+      setLabels({
+        ...labels,
+        phoneNumber: errorMessage.duplicateUser,
+      });
+    } else if (
       formData.name !== "" &&
       formData.email !== "" &&
       formData.phoneNumber !== "" &&
@@ -110,7 +120,7 @@ function SignUp(props) {
   };
   return (
     <>
-      <div className="container form ">
+      <div className="container form mw-100">
         <form className="d-flex flex-column close" onSubmit={onFormSubmit}>
           <big
             onClick={() => {
