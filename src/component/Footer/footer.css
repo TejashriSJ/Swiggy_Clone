@@ -14,7 +14,7 @@ li {
   position: fixed;
   bottom: 0;
   background-color: white;
-  z-index: 2;
+  z-index: 5;
   width: 100vw;
 }
 .mobile-footer p {

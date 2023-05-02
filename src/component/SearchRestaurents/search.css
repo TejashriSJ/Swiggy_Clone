@@ -1,0 +1,24 @@
+.search-container {
+  min-height: 75vh;
+  padding-top: 7rem;
+  background-color: rgb(252, 247, 247);
+}
+
+.search-bar input {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.search-bar input:focus {
+  border: none;
+}
+.search-bar {
+  width: 50%;
+  border: 1px solid rgb(207, 199, 199);
+  border-radius: 0.5rem;
+}
+@media (max-width: 1023px) {
+  .search-bar {
+    width: 90%;
+  }
+}

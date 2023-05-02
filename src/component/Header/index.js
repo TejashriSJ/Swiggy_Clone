@@ -10,6 +10,7 @@ import "./header.css";
 import swiggyLogo from "../../swiggy.svg";
 
 function Header() {
+  const dispatch = useDispatch();
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
   const logedInUser = useSelector((state) => {
     return state.user.loggedInUser;
@@ -18,10 +19,9 @@ function Header() {
     return state.user.users;
   });
 
-  const dispatch = useDispatch();
-
   const [logInStatus, setLogInStatus] = useState(false);
   const [logoutStatus, setLogOutStatus] = useState(false);
+  const [logOutPrompt, setLogOutPrompt] = useState(false);
 
   const cartItems = useSelector((state) => {
     return state.cart.cartItems;
@@ -31,6 +31,22 @@ function Header() {
   }, 0);
 
   const navigate = useNavigate();
+
+  const onClickYes = () => {
+    setLogOutStatus(false);
+    dispatch({ type: LOG_OUT });
+    dispatch({ type: EMPTY_CART });
+    setLogOutPrompt(false);
+    // setLogedInUser("Sign In");
+  };
+  const onClickNo = () => {
+    setLogOutPrompt(false);
+  };
+
+  const onClickLogOut = () => {
+    setLogOutPrompt(true);
+  };
+
   return (
     <div>
       <nav>
@@ -102,18 +118,7 @@ function Header() {
                     : registeredUsers[logedInUser].name}
                 </span>{" "}
               </li>
-              {logoutStatus && (
-                <li
-                  onClick={() => {
-                    setLogOutStatus(false);
-                    dispatch({ type: LOG_OUT });
-                    dispatch({ type: EMPTY_CART });
-                    // setLogedInUser("Sign In");
-                  }}
-                >
-                  Log Out
-                </li>
-              )}
+              {logoutStatus && <li onClick={onClickLogOut}>Log Out</li>}
               <li
                 className="d-flex align-items-center gap-1"
                 onClick={() => {
@@ -146,6 +151,22 @@ function Header() {
               //setLogedInUser={setLogedInUser}
             />
           )}
+        </div>
+      )}
+      {logOutPrompt && (
+        <div className="background-blur">
+          <div className="log-out-prompt">
+            <h5>Are you sure you want to log out?</h5>
+            <p>Your cart data will be lost if you log out!</p>
+            <div className="d-flex justify-content-around">
+              <button className="yesbtn" onClick={onClickYes}>
+                Yes
+              </button>{" "}
+              <button className="nobtn" onClick={onClickNo}>
+                No
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

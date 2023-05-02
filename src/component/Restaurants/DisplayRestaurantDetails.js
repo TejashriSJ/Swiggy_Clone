@@ -25,7 +25,7 @@ function DisplayRestaurantDetails(props) {
     <div
       className="card"
       onClick={() => {
-        navigate(`restaurants/${restaurantUrl}`);
+        navigate(`/restaurants/${restaurantUrl}`);
       }}
     >
       <img className="card-img-top " src={image_url} alt="card " />
