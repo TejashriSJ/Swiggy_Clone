@@ -56,8 +56,11 @@
 .promptForChangingRestaurant {
   position: fixed;
   z-index: 2;
-  left: 30vw;
-  top: 60vh;
+  /* left: 30vw;
+  top: 60vh; */
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 40rem;
   background-color: white;
   border: 1px solid rgb(199, 190, 190);
@@ -80,7 +83,7 @@
   background-color: white;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 800px) {
   .restaurant-page {
     width: 100vw;
   }
@@ -104,11 +107,7 @@
     left: 1rem;
   }
   .promptForChangingRestaurant {
-    position: fixed;
-
-    left: 0rem;
-    bottom: 0rem;
-    width: 100vw;
+    width: 80vw;
     font-size: 0.8rem;
     z-index: 3;
   }

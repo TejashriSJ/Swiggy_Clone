@@ -13,6 +13,16 @@
 .items-header {
   gap: 10rem;
 }
+.checked-items {
+  z-index: 2;
+}
+.each-item-name {
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(216, 208, 208);
+  padding: 0.5rem;
+}
 @media (max-width: 1400px) {
   .items-header {
     gap: 2rem;

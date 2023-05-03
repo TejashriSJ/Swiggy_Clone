@@ -47,7 +47,7 @@ const Restaurants = (state = initRestaurents, action) => {
 
     case FILTER:
       let cuisines = action.payload;
-      if (cuisines) {
+      if (cuisines && cuisines.length !== 0) {
         cuisines = cuisines.split(",");
 
         return {
@@ -63,7 +63,7 @@ const Restaurants = (state = initRestaurents, action) => {
           }),
         };
       } else {
-        return state;
+        return initRestaurents;
       }
 
     default:
