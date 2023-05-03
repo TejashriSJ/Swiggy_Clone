@@ -22,8 +22,8 @@ function CartItems(props) {
             )}
             {!veg && (
               <i
-                className="non-veg-logo align-self-start fa-solid fa-circle fa-2xs"
-                style={{ color: "red" }}
+                class="fa-sharp non-veg-logo align-self-start fa-solid fa-play fa-xs fa-rotate-270"
+                style={{ color: "#c70000" }}
               ></i>
             )}
             <h6 className="w-5">{name}</h6>

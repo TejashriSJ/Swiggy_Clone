@@ -19,6 +19,7 @@ li {
 }
 .mobile-footer p {
   font-size: 0.6rem;
-  color: gray;
+  color: black;
+  font-weight: 500;
   cursor: pointer;
 }

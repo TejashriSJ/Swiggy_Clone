@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import FilterRestaurants from "../Restaurants/FilterRestaurants";
 import "./ItemsHeader.css";
 
 function ItemsHeader() {
   const navigate = useNavigate();
+  const [showFilterOptions, setShowFilterOptions] = useState(false);
   return (
     <nav className="d-none d-lg-flex align-self-xl-center align-self-lg-start items-header  align-items-center mt-5 ">
       <h3 className="restaurent-heading ">Restaurants </h3>
@@ -54,9 +57,22 @@ function ItemsHeader() {
             {" "}
             Cost: High To Low{" "}
           </li>
-          <li className="nav-link">Filters</li>
+          <li
+            className="nav-link"
+            onClick={() => {
+              setShowFilterOptions(true);
+            }}
+          >
+            Filters
+          </li>
         </ul>
       </div>
+
+      {showFilterOptions && (
+        <div div className="background-blur">
+          <FilterRestaurants setShowFilterOptions={setShowFilterOptions} />{" "}
+        </div>
+      )}
     </nav>
   );
 }

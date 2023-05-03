@@ -88,7 +88,7 @@ function DisplayAllItems(props) {
     <>
       <div className="item d-flex">
         <div className="item-description">
-          <div className="mb-2">
+          <div className="mb-2 ">
             {veg ? (
               <i
                 class="veg-logo fa-solid fa-circle fa-2xs"
@@ -96,8 +96,8 @@ function DisplayAllItems(props) {
               ></i>
             ) : (
               <i
-                class="non-veg-logo fa-solid fa-circle fa-2xs"
-                style={{ color: "red" }}
+                class="fa-sharp non-veg-logo fa-solid fa-play fa-xs fa-rotate-270"
+                style={{ color: "#c70000" }}
               ></i>
             )}{" "}
             {best_seller && (

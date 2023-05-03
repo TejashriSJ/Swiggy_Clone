@@ -46,7 +46,7 @@ function MobileFooter() {
       <div className="d-flex flex-column">
         <p
           onClick={() => {
-            if (!logoutStatus) {
+            if (!logoutStatus && loggedInUser === "Sign In") {
               setBtnStatus({ signIn: true, signUp: false });
             } else {
               setDisplayDetails(true);
@@ -60,7 +60,12 @@ function MobileFooter() {
         <SignIn setBtnStatus={setBtnStatus} setLogOutStatus={setLogOutStatus} />
       )}
       {btnStatus.signUp && <SignUp setBtnStatus={setBtnStatus} />}
-      {displayDetails && <MyAccount />}
+      {displayDetails && (
+        <MyAccount
+          setDisplayDetails={setDisplayDetails}
+          setLogOutStatus={setLogOutStatus}
+        />
+      )}
     </div>
   );
 }

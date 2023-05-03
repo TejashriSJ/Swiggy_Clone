@@ -26,6 +26,24 @@
   background-color: #48c479;
   color: white;
 }
+/*filter restaurants */
+.filter-restaurants {
+  width: 28rem;
+  position: absolute;
+  height: 100vh;
+  right: 0rem;
+  top: 0rem;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+}
+.filter-show-btn {
+  background-color: #fc8019;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
 @media (max-width: 1400px) {
   .restaurant-block {
     padding-top: 7rem;

@@ -37,7 +37,6 @@ function Header() {
     dispatch({ type: LOG_OUT });
     dispatch({ type: EMPTY_CART });
     setLogOutPrompt(false);
-    // setLogedInUser("Sign In");
   };
   const onClickNo = () => {
     setLogOutPrompt(false);
@@ -141,16 +140,10 @@ function Header() {
           {btnStatus.signIn && (
             <SignIn
               setBtnStatus={setBtnStatus}
-              //setLogedInUser={setLogedInUser}
               setLogOutStatus={setLogOutStatus}
             />
           )}
-          {btnStatus.signUp && (
-            <SignUp
-              setBtnStatus={setBtnStatus}
-              //setLogedInUser={setLogedInUser}
-            />
-          )}
+          {btnStatus.signUp && <SignUp setBtnStatus={setBtnStatus} />}
         </div>
       )}
       {logOutPrompt && (

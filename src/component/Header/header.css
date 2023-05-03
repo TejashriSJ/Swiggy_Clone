@@ -107,16 +107,21 @@ li:hover {
   padding: 2rem;
 }
 .yesbtn {
-  padding: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
   background-color: green;
   color: white;
   font-weight: 500;
+  border: none;
+  border-radius: 0.2rem;
 }
 .nobtn {
-  padding: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: red;
   color: white;
   font-weight: 500;
+  border: none;
+  border-radius: 0.2rem;
 }
 a:hover {
   color: white;
@@ -145,13 +150,15 @@ a:hover {
   right: 0;
   z-index: 2;
 }
-.account-details div {
+.user-options div {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgb(224, 210, 210);
 }
 .user-details {
-  border-bottom: 1px solid black;
+  border: 1px solid rgb(224, 210, 210);
+  background-color: rgb(236, 230, 230);
+  padding: 1rem;
 }
 
 @media (max-width: 1400px) {
