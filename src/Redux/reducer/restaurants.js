@@ -5,6 +5,7 @@ import {
   COST_FOR_TWO,
   COST_FOR_TWO_H2L,
   RELEVANCE,
+  FILTER,
 } from "../actionTypes";
 
 const initRestaurents = { Restaurant };
@@ -43,6 +44,28 @@ const Restaurants = (state = initRestaurents, action) => {
           return Number(restaurant2.price) - Number(restaurant1.price);
         }),
       };
+
+    case FILTER:
+      let cuisines = action.payload;
+      if (cuisines) {
+        cuisines = cuisines.split(",");
+
+        return {
+          Restaurant: initRestaurents.Restaurant.filter((restaurant) => {
+            let categories = restaurant.categories.split(", ");
+            let setOfItems = new Set([...cuisines, ...categories]);
+
+            if (setOfItems.size < categories.length + cuisines.length) {
+              return true;
+            } else {
+              return false;
+            }
+          }),
+        };
+      } else {
+        return state;
+      }
+
     default:
       return state;
   }

@@ -3,7 +3,6 @@ import { ADD_USER, LOG_IN, LOG_OUT } from "../actionTypes";
 const initUser = { users: {}, loggedInUser: "Sign In" };
 
 const user = (state = initUser, action) => {
-  console.log("user added");
   switch (action.type) {
     case ADD_USER:
       return {

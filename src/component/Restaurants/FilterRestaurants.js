@@ -1,7 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FilterRestaurants(props) {
+  const navigate = useNavigate();
   const [checkedItems, setCheckedItems] = useState([]);
+
+  const onCheckCuisines = (event) => {
+    if (event.target.checked) {
+      setCheckedItems([...checkedItems, event.target.name]);
+    } else {
+      setCheckedItems([
+        ...checkedItems.filter((item) => {
+          return item !== event.target.name;
+        }),
+      ]);
+    }
+  };
+  //console.log("cuisines", checkedItems);
+
   return (
     <div className="filter-restaurants p-3">
       <h4 className="mb-5">
@@ -16,6 +32,7 @@ function FilterRestaurants(props) {
         Filters
       </h4>
       <b>Cuisines:</b>
+
       <div className="d-flex justify-content-around mt-4">
         <div className="d-flex flex-column gap-3">
           <div className="form-check">
@@ -24,8 +41,10 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="North Indian"
               name="North Indian"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("North Indian")}
             />
-            <label className="form-check-label" for="North Indian">
+            <label className="form-check-label" htmlFor="North Indian">
               North Indian
             </label>
           </div>
@@ -35,6 +54,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Beverages"
               name="Beverages"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Beverages")}
             />
             <label className="form-check-label" for="Beverages">
               Beverages
@@ -46,6 +67,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Italian"
               name="Italian"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Italian")}
             />
             <label className="form-check-label" for="Italian">
               Italian
@@ -57,6 +80,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Pizzas"
               name="Pizzas"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Pizzas")}
             />
             <label className="form-check-label" for="Pizzas">
               Pizzas
@@ -67,7 +92,9 @@ function FilterRestaurants(props) {
               className="form-check-input"
               type="checkbox"
               id="Fast Food"
-              name="Fast Food "
+              name="Fast Food"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Fast Food")}
             />
             <label className="form-check-label" for="Fast Food ">
               Fast Food
@@ -81,6 +108,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Indian"
               name="Indian"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Indian")}
             />
             <label className="form-check-label" for="Indian">
               Indian
@@ -92,6 +121,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Chinese"
               name="Chinese"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Chinese")}
             />
             <label className="form-check-label" for="Chinese">
               Chinese
@@ -103,6 +134,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Snacks"
               name="Snacks"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Snacks")}
             />
             <label className="form-check-label" for="Snacks">
               Snacks
@@ -114,6 +147,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Desserts"
               name="Desserts"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Desserts")}
             />
             <label className="form-check-label" for="Desserts">
               Desserts
@@ -125,6 +160,8 @@ function FilterRestaurants(props) {
               type="checkbox"
               id="Continental"
               name="Continental"
+              onChange={onCheckCuisines}
+              checked={checkedItems.includes("Continental")}
             />
             <label className="form-check-label" for="North Indian">
               Continental
@@ -133,8 +170,23 @@ function FilterRestaurants(props) {
         </div>
       </div>
       <div className="d-flex mt-5 justify-content-between p-2 gap-5">
-        <button className="filter-clear-btn p-1 w-50">CLEAR</button>
-        <button className="filter-show-btn w-50">SHOW RESTAURANTS</button>
+        <button
+          className="filter-clear-btn p-1 w-50"
+          onClick={() => {
+            setCheckedItems([]);
+          }}
+        >
+          CLEAR
+        </button>
+        <button
+          className="filter-show-btn w-50"
+          onClick={() => {
+            navigate(`/?filter=${checkedItems}`);
+            props.setShowFilterOptions(false);
+          }}
+        >
+          SHOW RESTAURANTS
+        </button>
       </div>
     </div>
   );

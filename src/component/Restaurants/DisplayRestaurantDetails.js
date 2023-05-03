@@ -3,23 +3,31 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
+import { FILTER } from "../../Redux/actionTypes";
+
 import "./restaurant.css";
 
 function DisplayRestaurantDetails(props) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const { title, categories, rating, delivery_time, price, image_url } =
     props.restaurant;
 
-  const navigate = useNavigate();
   const { search } = useLocation();
   const params = new URLSearchParams(search);
   const sortType = params.get("sortBy");
-  const dispatch = useDispatch();
+  const filterCuisines = params.get("filter");
 
   let restaurantUrl = title.toLowerCase().replaceAll(" ", "-");
 
   useEffect(() => {
-    dispatch({ type: sortType });
-  }, [sortType]);
+    if (sortType !== null) {
+      dispatch({ type: sortType });
+    } else {
+      dispatch({ type: FILTER, payload: filterCuisines });
+    }
+  }, [sortType, filterCuisines]);
 
   return (
     <div
