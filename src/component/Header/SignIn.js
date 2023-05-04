@@ -123,10 +123,10 @@ function SignIn(props) {
           <div>
             {isFormSubmit && (
               <div className="blur-login-bg">
-                <div className="d-flex flex-column align-items-center justify-content-center">
-                  <p className="text-success">Login Successfull</p>
+                <div className="d-flex log-prompt flex-column align-items-center justify-content-center">
+                  <h4 className="text-success">Login Successfull!!</h4>
                   <Link to="/" style={{ textDecoration: "none" }}>
-                    <button className="btn prompt" onClick={onClickOk}>
+                    <button className="prompt-btn" onClick={onClickOk}>
                       OK
                     </button>
                   </Link>

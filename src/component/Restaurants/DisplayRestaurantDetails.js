@@ -16,6 +16,8 @@ function DisplayRestaurantDetails(props) {
 
   const { search } = useLocation();
   const params = new URLSearchParams(search);
+  console.log("params", params);
+
   const sortType = params.get("sortBy");
   const filterCuisines = params.get("filter");
 
@@ -23,6 +25,9 @@ function DisplayRestaurantDetails(props) {
 
   useEffect(() => {
     if (sortType !== null) {
+      if (filterCuisines !== null) {
+        params.append("sortBy", `${sortType}`);
+      }
       dispatch({ type: sortType });
     } else {
       dispatch({ type: FILTER, payload: filterCuisines });

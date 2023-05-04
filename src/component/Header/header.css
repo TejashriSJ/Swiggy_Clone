@@ -94,9 +94,16 @@ li:hover {
   z-index: 1;
 }
 
-.prompt {
-  text-decoration: none;
-  list-style: none;
+.prompt-btn {
+  background-color: #fc8019;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.2rem;
 }
 .log-out-prompt {
   position: absolute;
@@ -108,7 +115,6 @@ li:hover {
 }
 .yesbtn {
   padding: 0.5rem 1rem 0.5rem 1rem;
-
   background-color: green;
   color: white;
   font-weight: 500;
@@ -128,7 +134,15 @@ a:hover {
 }
 
 .blur-login-bg {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+
+  /* position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -100%);
@@ -136,7 +150,18 @@ a:hover {
   border: 1px solid rgb(224, 214, 214);
   padding: 2rem;
   background-color: white;
-  z-index: 2;
+  z-index: 2; */
+}
+.log-prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 25rem;
+  border: 1px solid rgb(224, 214, 214);
+  padding: 2rem;
+  background-color: white;
+  z-index: 3;
 }
 /* user details */
 

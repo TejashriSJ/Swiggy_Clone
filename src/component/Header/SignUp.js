@@ -229,10 +229,10 @@ function SignUp(props) {
           <div>
             {isFormSubmit && (
               <div className="blur-login-bg">
-                <div className="d-flex flex-column align-items-center justify-content-center">
-                  <p className="text-success">Regestered Successfully</p>
+                <div className="d-flex log-prompt flex-column align-items-center justify-content-center">
+                  <h3 className="text-success">Regestered Successfully</h3>
                   <Link to="/" style={{ textDecoration: "none" }}>
-                    <button className="btn prompt" onClick={onClickOk}>
+                    <button className=" prompt-btn" onClick={onClickOk}>
                       OK
                     </button>
                   </Link>
