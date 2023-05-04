@@ -25,7 +25,7 @@ function DisplayAllItems(props) {
   const presentItem = cartData.find((item) => {
     return item.name === name;
   });
-
+  console.log("present item", presentItem);
   const [addBtnstatus, setAddBtnStatus] = useState(
     presentItem && cartRestaurant === restaurant ? true : false
   );
@@ -101,12 +101,12 @@ function DisplayAllItems(props) {
           <div className="mb-2 ">
             {veg ? (
               <i
-                class="veg-logo fa-solid fa-circle fa-2xs"
+                className="veg-logo fa-solid fa-circle fa-2xs"
                 style={{ color: "green" }}
               ></i>
             ) : (
               <i
-                class="fa-sharp non-veg-logo fa-solid fa-play fa-xs fa-rotate-270"
+                className="fa-sharp non-veg-logo fa-solid fa-play fa-xs fa-rotate-270"
                 style={{ color: "#c70000" }}
               ></i>
             )}{" "}
@@ -114,7 +114,7 @@ function DisplayAllItems(props) {
               <>
                 {" "}
                 <i
-                  class="fa-solid fa-star fa-sm"
+                  className="fa-solid fa-star fa-sm"
                   style={{ color: "rgb(250, 219, 42)" }}
                 ></i>{" "}
                 <b className="text-warning">Best Seller</b>
@@ -125,7 +125,7 @@ function DisplayAllItems(props) {
           <h6 className="item-title"> {name}</h6>
           <b className="item-rate">
             <i
-              class="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
+              className="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
               style={{ color: "#000000;" }}
             ></i>{" "}
             {price}{" "}
@@ -155,7 +155,7 @@ function DisplayAllItems(props) {
           <div>
             {cartInfo.count} {cartInfo.count === 1 ? "item" : "items"} |{" "}
             <i
-              class="fa-solid fa-indian-rupee-sign fa-xs"
+              className="fa-solid fa-indian-rupee-sign fa-xs"
               style={{ color: "#ffffff" }}
             ></i>{" "}
             {cartInfo.amount}

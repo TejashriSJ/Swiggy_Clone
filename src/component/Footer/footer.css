@@ -4,9 +4,13 @@
 .icons i:hover {
   transform: scale(1.1);
 }
-li {
+.footer li {
   list-style: none;
   cursor: pointer;
+}
+.footer li:hover {
+  color: white;
+  text-decoration: underline;
 }
 /* mobile footer */
 .mobile-footer {

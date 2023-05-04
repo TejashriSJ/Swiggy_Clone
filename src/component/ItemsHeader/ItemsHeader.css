@@ -1,15 +1,12 @@
 .sortBar {
-  border-bottom: 1px solid rgb(190, 190, 190);
   width: fit-content;
-  border: 0rem;
+  cursor: pointer;
 }
 .sortBar li:hover {
   box-sizing: border-box;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
-.restaurent-heading {
-  margin-left: 7rem;
-}
+
 .items-header {
   gap: 10rem;
 }
@@ -25,7 +22,7 @@
 }
 @media (max-width: 1400px) {
   .items-header {
-    gap: 2rem;
+    gap: 0rem;
     margin-left: 0rem;
   }
 }

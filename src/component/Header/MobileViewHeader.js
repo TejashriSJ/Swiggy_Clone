@@ -14,7 +14,10 @@ function MobileViewHeader() {
     <div className="mobile-header align-self-start p-2   d-flex d-lg-none align-items-center justify-content-between">
       <div className="d-flex flex-column">
         <div className="d-flex  align-items-center gap-2">
-          <i class="fa-solid fa-location-dot" style={{ color: "#000000;" }}></i>
+          <i
+            className="fa-solid fa-location-dot"
+            style={{ color: "#000000" }}
+          ></i>
           <b>
             <big>Other</big>
           </b>

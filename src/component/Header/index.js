@@ -49,7 +49,7 @@ function Header() {
   return (
     <div>
       <nav>
-        <div className="container header d-none  d-lg-flex align-items-center align-self-xl-center align-self-lg-start justify-content-xl-between justify-content-lg-start">
+        <div className="container header d-none  d-lg-flex align-items-center align-self-xl-center align-self-lg-start justify-content-xl-between justify-content-lg-center">
           <div className="d-flex align-items-center gap-2 ">
             <Link to="/">
               <img
@@ -67,7 +67,7 @@ function Header() {
                 Bengaluru,Karnataka,India{" "}
               </small>
               <i
-                class="fa-solid fa-chevron-down fa-sm"
+                className="fa-solid fa-chevron-down fa-sm"
                 style={{ color: "#f22602" }}
               ></i>
             </p>
@@ -83,7 +83,7 @@ function Header() {
               >
                 {" "}
                 <i
-                  class="fa-solid fa-magnifying-glass fa-sm"
+                  className="fa-solid fa-magnifying-glass fa-sm"
                   style={{ color: "#000000" }}
                 ></i>{" "}
                 Search
@@ -91,7 +91,7 @@ function Header() {
               <li className="d-flex align-items-center gap-1 ">
                 {" "}
                 <i
-                  class="fa-thin fa-percent fa-sm"
+                  className="fa-thin fa-percent fa-sm"
                   style={{ color: "#000205" }}
                 ></i>{" "}
                 Offers
@@ -100,7 +100,7 @@ function Header() {
               <li className=" d-flex align-items-center gap-1">
                 {" "}
                 <i
-                  class="fa-regular fa-user"
+                  className="fa-regular fa-user"
                   style={{ color: "#000000" }}
                 ></i>{" "}
                 <span
@@ -125,7 +125,7 @@ function Header() {
                 }}
               >
                 <i
-                  class="fa-solid fa-cart-shopping fa-sm"
+                  className="fa-solid fa-cart-shopping fa-sm"
                   style={{ color: "#000000" }}
                 ></i>
                 <span className="cartItemsCount">{cartItemsCount}</span>

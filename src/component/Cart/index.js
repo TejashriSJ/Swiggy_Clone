@@ -85,7 +85,7 @@ function Cart() {
                     Logged In{" "}
                     <span>
                       <i
-                        class="fa-solid fa-circle-check"
+                        className="fa-solid fa-circle-check"
                         style={{ color: "#2d8000" }}
                       ></i>
                     </span>

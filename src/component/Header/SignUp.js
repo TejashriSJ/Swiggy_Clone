@@ -22,7 +22,8 @@ function SignUp(props) {
     phoneNumber: <p className="text-danger">Enter Your Phone Number</p>,
     name: <p className="text-danger">Invalid Name</p>,
     email: <p className="text-danger">Invalid Email Address</p>,
-    duplicateUser: <p className="text-danger">Mobile number already exist</p>,
+    duplicatePhno: <p className="text-danger">Mobile number already exist</p>,
+    duplicateEmail: <p className="text-danger">Email id already exist</p>,
   };
 
   const [labels, setLabels] = useState(initLabels);
@@ -69,7 +70,7 @@ function SignUp(props) {
       }
     } else if (
       event.target.name === "name" &&
-      !validator.isAlpha(formData.name)
+      !validator.isAlpha(formData.name, "en-IN", { ignore: " " })
     ) {
       setLabels({
         ...labels,
@@ -86,17 +87,28 @@ function SignUp(props) {
   };
 
   const onFormSubmit = (event) => {
-    if (Object.keys(registeredUsers).includes(formData.phoneNumber)) {
+    let allRegisteredEmails = Object.values(registeredUsers).map((user) => {
+      return user.email;
+    });
+
+    if (allRegisteredEmails.includes(formData.email)) {
+      console.log("duplicate mail");
       setLabels({
         ...labels,
-        phoneNumber: errorMessage.duplicateUser,
+        email: errorMessage.duplicateEmail,
       });
+      if (Object.keys(registeredUsers).includes(formData.phoneNumber)) {
+        setLabels({
+          ...labels,
+          phoneNumber: errorMessage.duplicatePhno,
+        });
+      }
     } else if (
       formData.name !== "" &&
       formData.email !== "" &&
       formData.phoneNumber !== "" &&
       formData.phoneNumber.length === 10 &&
-      validator.isAlpha(formData.name) &&
+      validator.isAlpha(formData.name, "en-IN", { ignore: " " }) &&
       validator.isEmail(formData.email) &&
       formData.phoneNumber[0] !== "0" &&
       validator.isMobilePhone(formData.phoneNumber)
@@ -143,7 +155,7 @@ function SignUp(props) {
               </span>
             </div>
             <img
-              class=""
+              className=""
               width="100"
               height="105"
               alt=""
@@ -208,7 +220,7 @@ function SignUp(props) {
             </a>
             <button
               type="submit"
-              className="btn text-light m-2 "
+              className="sign-btn btn text-light m-2 "
               onClick={onFormSubmit}
             >
               CONTINUE
@@ -230,7 +242,7 @@ function SignUp(props) {
             {isFormSubmit && (
               <div className="blur-login-bg">
                 <div className="d-flex log-prompt flex-column align-items-center justify-content-center">
-                  <h3 className="text-success">Regestered Successfully</h3>
+                  <h3 className="text-success">Registered Successfully</h3>
                   <Link to="/" style={{ textDecoration: "none" }}>
                     <button className=" prompt-btn" onClick={onClickOk}>
                       OK

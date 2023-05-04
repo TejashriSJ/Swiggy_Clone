@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import FilterRestaurants from "../Restaurants/FilterRestaurants";
@@ -8,6 +9,9 @@ function ItemsHeader() {
   const navigate = useNavigate();
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
+  const noOfRestaurants = useSelector((state) => {
+    return state.restaurants.Restaurant.length;
+  });
 
   useEffect(() => {
     if (checkedItems.length !== 0) {
@@ -19,8 +23,11 @@ function ItemsHeader() {
 
   return (
     <div>
-      <nav className="d-none d-lg-flex align-self-xl-center align-self-lg-start items-header  align-items-center mt-5 ">
-        <h3 className="restaurent-heading ">Restaurants </h3>
+      <nav className="d-none d-lg-flex align-self-xl-center align-self-lg-start items-header  align-items-center mt-5 justify-content-between ">
+        <h3 className="restaurent-heading ">
+          {noOfRestaurants}{" "}
+          {noOfRestaurants === 1 ? "restaurant" : "restaurants"}{" "}
+        </h3>
         <div className=" sortBar container d-flex ">
           <ul className=" text-dark d-flex  align-items-center gap-5">
             <li className="nav-link"> Relevance</li>
@@ -66,7 +73,7 @@ function ItemsHeader() {
                 setShowFilterOptions(true);
               }}
             >
-              Filters
+              <b> Filters</b>
             </li>
           </ul>
         </div>

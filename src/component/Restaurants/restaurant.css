@@ -44,7 +44,7 @@
   border: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
   .restaurant-block {
     padding-top: 7rem;
   }

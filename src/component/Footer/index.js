@@ -2,7 +2,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div className="bg-black pt-4 w-100 d-none d-lg-block">
+    <div className="footer bg-black pt-4 w-100 d-none d-lg-block">
       <div className="container p-2">
         <div>
           <div>
@@ -101,19 +101,19 @@ function Footer() {
 
               <div className="icons d-flex gap-3">
                 <i
-                  class="fa-brands fa-facebook-f fa-sm"
+                  className="fa-brands fa-facebook-f fa-sm"
                   style={{ color: "#ffffff" }}
                 ></i>
                 <i
-                  class="fa-brands fa-pinterest fa-sm"
+                  className="fa-brands fa-pinterest fa-sm"
                   style={{ color: "#ffffff" }}
                 ></i>
                 <i
-                  class="fa-brands fa-instagram fa-sm"
+                  className="fa-brands fa-instagram fa-sm"
                   style={{ color: "#ffffff" }}
                 ></i>
                 <i
-                  class="fa-brands fa-twitter fa-sm"
+                  className="fa-brands fa-twitter fa-sm"
                   style={{ color: "#ffffff" }}
                 ></i>
               </div>

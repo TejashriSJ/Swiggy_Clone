@@ -3,7 +3,7 @@ import "./promotion.css";
 function PromotionBlock() {
   return (
     <div
-      class="d-none d-lg-flex promotion justify-content-center align-items-center gap-5 py-5"
+      className="d-none d-lg-flex promotion justify-content-center align-items-center gap-5 py-5"
       style={{ backgroundColor: " #0c0c1a" }}
     >
       <img

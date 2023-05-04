@@ -16,7 +16,6 @@ function DisplayRestaurantDetails(props) {
 
   const { search } = useLocation();
   const params = new URLSearchParams(search);
-  console.log("params", params);
 
   const sortType = params.get("sortBy");
   const filterCuisines = params.get("filter");

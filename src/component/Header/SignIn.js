@@ -42,7 +42,6 @@ function SignIn(props) {
           type: LOG_IN,
           payload: formData.phoneNumber,
         });
-        //props.setLogedInUser(registerdUsers[formData.phoneNumber].name);
         props.setLogOutStatus(true);
         setIsFormSubmit(true);
       } else {
@@ -81,7 +80,7 @@ function SignIn(props) {
               </span>
             </div>
             <img
-              class=""
+              className=""
               width="100"
               height="105"
               alt=""

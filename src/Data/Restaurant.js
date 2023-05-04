@@ -48,16 +48,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -231,16 +222,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -903,16 +885,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -1086,16 +1059,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -1510,16 +1474,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -2193,16 +2148,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
@@ -2616,16 +2562,7 @@ const Restaurant = [
         veg: true,
         best_seller: true,
       },
-      {
-        category: "Recommended",
-        name: "Masala Dosa",
-        price: 150,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/p3dqrypfr9gdpnz6qinh",
-        veg: true,
-        best_seller: true,
-      },
+
       {
         category: "Recommended",
         name: "Tandoori Platter",
