@@ -43,7 +43,10 @@ function DisplayRestaurantDetails(props) {
       <img className="card-img-top " src={image_url} alt="card " />
       <div className="card-body">
         <h6 className="card-title">{title}</h6>
-        <i class="fa-solid fa-period fa-2xs" style={{ color: "#050505" }}></i>
+        <i
+          className="fa-solid fa-period fa-2xs"
+          style={{ color: "#050505" }}
+        ></i>
         <small className="card-subtitle text-secondary">{categories}</small>
         <div className="mt-2 d-flex  justify-content-between text-secondary align-items-center ">
           <small className="rating">

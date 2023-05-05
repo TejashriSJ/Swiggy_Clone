@@ -15,7 +15,7 @@ function DisplayRestaurantDetails(props) {
           <div className="ratings align-self-start">
             <b className="text-success">
               <i
-                classname="fa-solid fa-star fa-sm"
+                className="fa-solid fa-star fa-sm"
                 style={{ color: "#007007" }}
               ></i>{" "}
               {rating}

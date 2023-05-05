@@ -6,12 +6,15 @@ import { useSelector, useDispatch } from "react-redux";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import { EMPTY_CART, LOG_OUT } from "../../Redux/actionTypes";
-import "./header.css";
 import swiggyLogo from "../../swiggy.svg";
+import "./header.css";
 
 function Header() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
+
   const logedInUser = useSelector((state) => {
     return state.user.loggedInUser;
   });
@@ -30,12 +33,11 @@ function Header() {
     return (count += item.quantity);
   }, 0);
 
-  const navigate = useNavigate();
-
   const onClickYes = () => {
+    navigate("/");
     setLogOutStatus(false);
-    dispatch({ type: LOG_OUT });
     dispatch({ type: EMPTY_CART });
+    dispatch({ type: LOG_OUT });
     setLogOutPrompt(false);
   };
   const onClickNo = () => {

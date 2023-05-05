@@ -60,14 +60,11 @@
   width: 50rem;
   padding: 1rem;
   color: white;
-  z-index: 2;
   margin: 2rem;
 }
 .promptForChangingRestaurant {
   position: fixed;
   z-index: 2;
-  /* left: 30vw;
-  top: 60vh; */
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);

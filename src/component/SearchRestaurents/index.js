@@ -5,8 +5,9 @@ import Header from "../Header";
 import Footer from "../Footer";
 import MobileFooter from "../Footer/MobileFooter";
 import MobileViewHeader from "../Header/MobileViewHeader";
-import "./search.css";
 import DisplayRestaurantDetails from "../Restaurants/DisplayRestaurantDetails";
+
+import "./search.css";
 
 function SearchRestaurants() {
   const [searchValue, setSeachValue] = useState("");
@@ -40,6 +41,7 @@ function SearchRestaurants() {
     });
     setMatchedRestaurants(matchedRestaurantsList);
   };
+
   return (
     <>
       <Header />

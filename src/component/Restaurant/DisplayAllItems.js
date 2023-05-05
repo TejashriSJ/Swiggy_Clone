@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 import {
   ADD_TO_CART,
   REMOVE_ITEM,
@@ -25,7 +26,7 @@ function DisplayAllItems(props) {
   const presentItem = cartData.find((item) => {
     return item.name === name;
   });
-  console.log("present item", presentItem);
+
   const [addBtnstatus, setAddBtnStatus] = useState(
     presentItem && cartRestaurant === restaurant ? true : false
   );
@@ -94,6 +95,7 @@ function DisplayAllItems(props) {
       });
     }
   };
+
   return (
     <>
       <div className="item d-flex">
@@ -126,7 +128,7 @@ function DisplayAllItems(props) {
           <b className="item-rate">
             <i
               className="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
-              style={{ color: "#000000;" }}
+              style={{ color: "#000000" }}
             ></i>{" "}
             {price}{" "}
           </b>

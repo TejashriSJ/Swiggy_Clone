@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 import validator from "validator";
 import { ADD_USER } from "../../Redux/actionTypes";
 
 function SignUp(props) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { pathname } = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,7 +60,6 @@ function SignUp(props) {
   };
 
   const onBlurInputField = (event) => {
-    console.log(event.target.name);
     if (event.target.name === "phoneNumber") {
       if (formData.phoneNumber.length !== 10) {
         setLabels({
@@ -92,7 +96,6 @@ function SignUp(props) {
     });
 
     if (allRegisteredEmails.includes(formData.email)) {
-      console.log("duplicate mail");
       setLabels({
         ...labels,
         email: errorMessage.duplicateEmail,
@@ -127,6 +130,7 @@ function SignUp(props) {
   };
 
   const onClickOk = () => {
+    navigate(pathname);
     setIsFormSubmit(false);
     props.setBtnStatus({ signUp: false, signIn: false });
   };
@@ -169,10 +173,10 @@ function SignUp(props) {
               id="phone-number"
               type="text"
               required
-              maxlength="10"
+              maxLength="10"
               name="phoneNumber"
               value={formData.phoneNumber}
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Phone number"
               onChange={onChangeInput}
               onBlur={onBlurInputField}
@@ -184,7 +188,7 @@ function SignUp(props) {
               <input
                 className="form-control"
                 type="text"
-                maxlength="30"
+                maxLength="30"
                 required
                 placeholder="Name"
                 id="name"
@@ -243,11 +247,10 @@ function SignUp(props) {
               <div className="blur-login-bg">
                 <div className="d-flex log-prompt flex-column align-items-center justify-content-center">
                   <h3 className="text-success">Registered Successfully</h3>
-                  <Link to="/" style={{ textDecoration: "none" }}>
-                    <button className=" prompt-btn" onClick={onClickOk}>
-                      OK
-                    </button>
-                  </Link>
+
+                  <button className=" prompt-btn" onClick={onClickOk}>
+                    OK
+                  </button>
                 </div>
               </div>
             )}

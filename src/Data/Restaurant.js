@@ -363,16 +363,6 @@ const Restaurant = [
     items: [
       {
         category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
         price: 245,
         description: "",
@@ -611,16 +601,6 @@ const Restaurant = [
         best_seller: false,
       },
 
-      {
-        category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
       {
         category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
@@ -1211,16 +1191,6 @@ const Restaurant = [
 
       {
         category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
         price: 245,
         description: "",
@@ -1626,16 +1596,6 @@ const Restaurant = [
 
       {
         category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
         price: 245,
         description: "",
@@ -1874,16 +1834,6 @@ const Restaurant = [
         best_seller: false,
       },
 
-      {
-        category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
       {
         category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
@@ -2300,16 +2250,6 @@ const Restaurant = [
 
       {
         category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
-      {
-        category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",
         price: 245,
         description: "",
@@ -2712,16 +2652,6 @@ const Restaurant = [
         best_seller: false,
       },
 
-      {
-        category: "Recommended",
-        name: "Veg Regular Hot & Spicy",
-        price: 135,
-        description: "",
-        img_url:
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/bnsrqraxiue5cksnrac3",
-        veg: true,
-        best_seller: true,
-      },
       {
         category: "Recommended",
         name: "Chicken Capsicum Onion Cheese",

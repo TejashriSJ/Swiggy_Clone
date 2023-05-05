@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import SignIn from "../Header/SignIn";
 import SignUp from "../Header/SignUp";
-
-import "./footer.css";
 import MyAccount from "../Header/MyAccount";
+import "./footer.css";
 
 function MobileFooter() {
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ function MobileFooter() {
   const [btnStatus, setBtnStatus] = useState({ signIn: false, signUp: false });
   const [logoutStatus, setLogOutStatus] = useState(false);
   const [displayDetails, setDisplayDetails] = useState(false);
+
   const registeredUsers = useSelector((state) => {
     return state.user.users;
   });

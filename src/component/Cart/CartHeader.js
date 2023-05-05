@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import swiggyLogo from "../../swiggy.svg";
 function CartHeader() {
   const navigate = useNavigate();
+
   return (
     <div className="d-flex cart-header  align-items-center justify-content-between">
       <div>

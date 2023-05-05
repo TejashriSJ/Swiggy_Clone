@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { EMPTY_CART, LOG_OUT } from "../../Redux/actionTypes";
 import "./header.css";
 
 function MyAccount(props) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [logOutPrompt, setLogOutPrompt] = useState(false);
 
   const registeredUsers = useSelector((state) => {
@@ -22,6 +25,7 @@ function MyAccount(props) {
     setLogOutPrompt(true);
   };
   const onClickYes = () => {
+    navigate("/");
     dispatch({ type: EMPTY_CART });
     dispatch({ type: LOG_OUT });
     props.setDisplayDetails(false);

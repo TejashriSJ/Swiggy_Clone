@@ -65,7 +65,6 @@ const Cart = (state = initCart, action) => {
       };
 
     case REMOVE_ITEM:
-      console.log("removed", state.name);
       let resetRestaurant =
         state.cartItems.length === 1 ? "" : state.restaurantName;
 

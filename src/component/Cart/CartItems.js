@@ -53,8 +53,8 @@ function CartItems(props) {
             </div>
             <b className="ms-5">
               <i
-                class="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
-                style={{ color: "#000000;" }}
+                className="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
+                style={{ color: "#000000" }}
               ></i>{" "}
               {price * quantity}
             </b>

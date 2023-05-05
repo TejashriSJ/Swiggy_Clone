@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import validator from "validator";
 import { Link } from "react-router-dom";
 import { LOG_IN } from "../../Redux/actionTypes";
 
 function SignIn(props) {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     phoneNumber: "",
   });
   const [isFormSubmit, setIsFormSubmit] = useState(false);
   const [formLabel, setFormLabel] = useState({ phoneNumber: "Phone Number" });
-
+  const registerdUsers = useSelector((state) => {
+    return state.user.users;
+  });
   const onChange = (event) => {
     if (validator.isNumeric(event.target.value) || event.target.value === "") {
       setFormData({
@@ -20,10 +27,6 @@ function SignIn(props) {
     }
     setFormLabel({ phoneNumber: "Phone Number" });
   };
-
-  const registerdUsers = useSelector((state) => {
-    return state.user.users;
-  });
 
   const formOnSubmit = (event) => {
     event.preventDefault();
@@ -51,6 +54,7 @@ function SignIn(props) {
   };
 
   const onClickOk = () => {
+    navigate(pathname);
     setIsFormSubmit(false);
     props.setBtnStatus({ signUp: false, signIn: false });
   };
@@ -94,14 +98,13 @@ function SignIn(props) {
               id="phone-number"
               type="text"
               required
-              tabindex="1"
-              maxlength="10"
+              maxLength="10"
               autoComplete="off"
               placeholder="Phone number"
               value={formData.phoneNumber}
               onChange={onChange}
             />
-            <label for="phone-number" className="text-secondary ">
+            <label htmlFor="phone-number" className="text-secondary ">
               {formLabel.phoneNumber}
             </label>
           </div>
@@ -124,11 +127,10 @@ function SignIn(props) {
               <div className="blur-login-bg">
                 <div className="d-flex log-prompt flex-column align-items-center justify-content-center">
                   <h4 className="text-success">Login Successfull!!</h4>
-                  <Link to="/" style={{ textDecoration: "none" }}>
-                    <button className="prompt-btn" onClick={onClickOk}>
-                      OK
-                    </button>
-                  </Link>
+
+                  <button className="prompt-btn" onClick={onClickOk}>
+                    OK
+                  </button>
                 </div>
               </div>
             )}

@@ -18,6 +18,7 @@ import "./cart.css";
 function Cart() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   let cartItems = useSelector((state) => {
     return state.cart.cartItems;
   });
@@ -195,8 +196,8 @@ function Cart() {
                 <h5>To Pay: </h5>
                 <b>
                   <i
-                    class="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
-                    style={{ color: "#000000;" }}
+                    className="fa-sharp fa-solid fa-indian-rupee-sign fa-sm"
+                    style={{ color: "#000000" }}
                   ></i>{" "}
                   {totalAmountToPay}
                 </b>

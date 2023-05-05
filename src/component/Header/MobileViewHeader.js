@@ -1,15 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import "./header.css";
 
 function MobileViewHeader() {
   const navigate = useNavigate();
+
   const cartItems = useSelector((state) => {
     return state.cart.cartItems;
   });
   let cartItemsCount = cartItems.reduce((count, item) => {
     return (count += item.quantity);
   }, 0);
+
   return (
     <div className="mobile-header align-self-start p-2   d-flex d-lg-none align-items-center justify-content-between">
       <div className="d-flex flex-column">

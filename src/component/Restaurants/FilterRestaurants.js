@@ -36,12 +36,12 @@ function FilterRestaurants(props) {
             <input
               className="form-check-input"
               type="checkbox"
-              id="North Indian"
+              id="NorthIndian"
               name="North Indian"
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("North Indian")}
             />
-            <label className="form-check-label" htmlFor="North Indian">
+            <label className="form-check-label" htmlFor="NorthIndian">
               North Indian
             </label>
           </div>
@@ -54,7 +54,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Beverages")}
             />
-            <label className="form-check-label" for="Beverages">
+            <label className="form-check-label" htmlFor="Beverages">
               Beverages
             </label>
           </div>
@@ -67,7 +67,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Italian")}
             />
-            <label className="form-check-label" for="Italian">
+            <label className="form-check-label" htmlFor="Italian">
               Italian
             </label>
           </div>
@@ -80,7 +80,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Pizzas")}
             />
-            <label className="form-check-label" for="Pizzas">
+            <label className="form-check-label" htmlFor="Pizzas">
               Pizzas
             </label>
           </div>
@@ -88,12 +88,12 @@ function FilterRestaurants(props) {
             <input
               className="form-check-input"
               type="checkbox"
-              id="Fast Food"
+              id="FastFood"
               name="Fast Food"
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Fast Food")}
             />
-            <label className="form-check-label" for="Fast Food ">
+            <label className="form-check-label" htmlFor="FastFood ">
               Fast Food
             </label>
           </div>
@@ -108,7 +108,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Indian")}
             />
-            <label className="form-check-label" for="Indian">
+            <label className="form-check-label" htmlFor="Indian">
               Indian
             </label>
           </div>
@@ -121,7 +121,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Chinese")}
             />
-            <label className="form-check-label" for="Chinese">
+            <label className="form-check-label" htmlFor="Chinese">
               Chinese
             </label>
           </div>
@@ -134,7 +134,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Snacks")}
             />
-            <label className="form-check-label" for="Snacks">
+            <label className="form-check-label" htmlFor="Snacks">
               Snacks
             </label>
           </div>
@@ -147,7 +147,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Desserts")}
             />
-            <label className="form-check-label" for="Desserts">
+            <label className="form-check-label" htmlFor="Desserts">
               Desserts
             </label>
           </div>
@@ -160,7 +160,7 @@ function FilterRestaurants(props) {
               onChange={onCheckCuisines}
               checked={props.checkedItems.includes("Continental")}
             />
-            <label className="form-check-label" for="North Indian">
+            <label className="form-check-label" htmlFor="North Indian">
               Continental
             </label>
           </div>
@@ -181,7 +181,6 @@ function FilterRestaurants(props) {
             if (props.checkedItems.length === 0) {
               navigate("/");
             } else {
-              console.log("/filter", props.checkedItems);
               navigate(`/?filter=${props.checkedItems}`);
             }
 

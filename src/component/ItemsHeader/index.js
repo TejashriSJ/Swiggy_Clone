@@ -9,6 +9,7 @@ function ItemsHeader() {
   const navigate = useNavigate();
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
+
   const noOfRestaurants = useSelector((state) => {
     return state.restaurants.Restaurant.length;
   });
