@@ -76,7 +76,7 @@ function Cart() {
                 <div className="p-3 mb-4 mt-lg-4 mt-5 pt-5 account">
                   <h4>Account</h4>
                   <p>
-                    To Place your order now, log in to your existing account or
+                    To Place your order now, sign in to your existing account or
                     sign up.
                   </p>
                 </div>

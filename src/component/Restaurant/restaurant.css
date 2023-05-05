@@ -6,6 +6,9 @@
   width: 50rem;
   justify-content: space-between;
 }
+.all-items {
+  min-height: 60vh;
+}
 
 .item {
   margin: 2rem;
@@ -88,6 +91,18 @@
   font-weight: bold;
   border: 3px solid green;
   background-color: white;
+}
+.items-search-bar {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 4rem wheat;
+}
+.items-search-bar input {
+  border-radius: 0.5rem;
+  border: none;
+}
+.items-search-bar input:focus {
+  border: none;
 }
 
 @media (max-width: 800px) {

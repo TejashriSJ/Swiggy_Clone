@@ -22,7 +22,6 @@ function Header() {
     return state.user.users;
   });
 
-  const [logInStatus, setLogInStatus] = useState(false);
   const [logoutStatus, setLogOutStatus] = useState(false);
   const [logOutPrompt, setLogOutPrompt] = useState(false);
 
@@ -119,7 +118,10 @@ function Header() {
                     : registeredUsers[logedInUser].name}
                 </span>{" "}
               </li>
-              {logoutStatus && <li onClick={onClickLogOut}>Log Out</li>}
+
+              {logedInUser !== "Sign In" && (
+                <li onClick={onClickLogOut}>Log Out</li>
+              )}
               <li
                 className="d-flex align-items-center gap-1"
                 onClick={() => {

@@ -49,9 +49,9 @@ function SearchRestaurants() {
       <div className="d-flex search-container flex-column align-items-center">
         <div className="search-bar input-group d-flex align-items-center">
           <input
-            className="form-control "
+            className="form-control"
             type="text"
-            placeholder="Search for restaurents and food"
+            placeholder="Search for restaurants and food"
             value={searchValue}
             onChange={onChangeSeachvalue}
           />

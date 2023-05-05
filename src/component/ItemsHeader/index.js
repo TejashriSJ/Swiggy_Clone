@@ -47,9 +47,6 @@ function ItemsHeader() {
                   ? "apply-underline nav-link"
                   : "nav-link"
               }
-              onClick={() => {
-                setIsActive("relavance");
-              }}
             >
               {" "}
               Relevance
