@@ -24,9 +24,7 @@ function DisplayRestaurantDetails(props) {
 
   useEffect(() => {
     if (sortType !== null) {
-      if (filterCuisines !== null) {
-        params.append("sortBy", `${sortType}`);
-      }
+      dispatch({ type: FILTER, payload: filterCuisines });
       dispatch({ type: sortType });
     } else {
       dispatch({ type: FILTER, payload: filterCuisines });
