@@ -4,6 +4,9 @@
 }
 .sortBar li:hover {
   box-sizing: border-box;
+  color: black;
+}
+.apply-underline {
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 

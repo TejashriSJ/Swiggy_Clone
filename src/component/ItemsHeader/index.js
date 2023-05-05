@@ -15,6 +15,7 @@ function ItemsHeader() {
 
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
+  const [isActive, setIsActive] = useState("relavance");
 
   const noOfRestaurants = useSelector((state) => {
     return state.restaurants.Restaurant.length;
@@ -40,10 +41,27 @@ function ItemsHeader() {
         </h3>
         <div className=" sortBar container d-flex ">
           <ul className=" text-dark d-flex  align-items-center gap-5">
-            <li className="nav-link"> Relevance</li>
             <li
-              className="nav-link"
+              className={
+                isActive === "relavance"
+                  ? "apply-underline nav-link"
+                  : "nav-link"
+              }
               onClick={() => {
+                setIsActive("relavance");
+              }}
+            >
+              {" "}
+              Relevance
+            </li>
+            <li
+              className={
+                isActive === "delivery-time"
+                  ? "apply-underline nav-link"
+                  : "nav-link"
+              }
+              onClick={() => {
+                setIsActive("delivery-time");
                 params.set("sortBy", "DELIVERY_TIME");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -55,8 +73,11 @@ function ItemsHeader() {
               Delivery Time
             </li>
             <li
-              className="nav-link"
+              className={
+                isActive === "rating" ? "apply-underline nav-link" : "nav-link"
+              }
               onClick={() => {
+                setIsActive("rating");
                 params.set("sortBy", "RATING");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -68,8 +89,13 @@ function ItemsHeader() {
               Rating
             </li>
             <li
-              className="nav-link"
+              className={
+                isActive === "low-to-high"
+                  ? "apply-underline nav-link"
+                  : "nav-link"
+              }
               onClick={() => {
+                setIsActive("low-to-high");
                 params.set("sortBy", "COST_FOR_TWO");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -81,8 +107,13 @@ function ItemsHeader() {
               Cost: Low To High
             </li>
             <li
-              className="nav-link"
+              className={
+                isActive === "high-to-low"
+                  ? "apply-underline nav-link"
+                  : "nav-link"
+              }
               onClick={() => {
+                setIsActive("high-to-low");
                 params.set("sortBy", "COST_FOR_TWO_H2L");
                 navigate({
                   pathname: currentUrl.pathname,
