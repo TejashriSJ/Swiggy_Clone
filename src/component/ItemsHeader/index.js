@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { RESET } from "../../Redux/actionTypes";
 
 import FilterRestaurants from "../Restaurants/FilterRestaurants";
 import "./ItemsHeader.css";
 
 function ItemsHeader() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const currentUrl = useLocation();
+
+  let params = new URLSearchParams(currentUrl.search);
+
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
 
@@ -16,9 +22,12 @@ function ItemsHeader() {
 
   useEffect(() => {
     if (checkedItems.length !== 0) {
-      navigate(`/?filter=${checkedItems}`);
+      params.set("filter", checkedItems);
+      navigate({ pathname: currentUrl.pathname, search: params.toString() });
     } else {
-      navigate("/");
+      params.delete("filter");
+      dispatch({ type: RESET });
+      navigate({ pathname: currentUrl.pathname, search: params.toString() });
     }
   }, [checkedItems]);
 
@@ -35,7 +44,11 @@ function ItemsHeader() {
             <li
               className="nav-link"
               onClick={() => {
-                navigate("/?sortBy=DELIVERY_TIME");
+                params.set("sortBy", "DELIVERY_TIME");
+                navigate({
+                  pathname: currentUrl.pathname,
+                  search: params.toString(),
+                });
               }}
             >
               {" "}
@@ -44,7 +57,11 @@ function ItemsHeader() {
             <li
               className="nav-link"
               onClick={() => {
-                navigate("/?sortBy=RATING");
+                params.set("sortBy", "RATING");
+                navigate({
+                  pathname: currentUrl.pathname,
+                  search: params.toString(),
+                });
               }}
             >
               {" "}
@@ -53,7 +70,11 @@ function ItemsHeader() {
             <li
               className="nav-link"
               onClick={() => {
-                navigate("/?sortBy=COST_FOR_TWO");
+                params.set("sortBy", "COST_FOR_TWO");
+                navigate({
+                  pathname: currentUrl.pathname,
+                  search: params.toString(),
+                });
               }}
             >
               {" "}
@@ -62,7 +83,11 @@ function ItemsHeader() {
             <li
               className="nav-link"
               onClick={() => {
-                navigate("/?sortBy=COST_FOR_TWO_H2L");
+                params.set("sortBy", "COST_FOR_TWO_H2L");
+                navigate({
+                  pathname: currentUrl.pathname,
+                  search: params.toString(),
+                });
               }}
             >
               {" "}

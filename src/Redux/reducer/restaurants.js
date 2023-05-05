@@ -4,7 +4,7 @@ import {
   RATING,
   COST_FOR_TWO,
   COST_FOR_TWO_H2L,
-  RELEVANCE,
+  RESET,
   FILTER,
 } from "../actionTypes";
 
@@ -12,7 +12,7 @@ const initRestaurents = { Restaurant };
 
 const Restaurants = (state = initRestaurents, action) => {
   switch (action.type) {
-    case RELEVANCE:
+    case RESET:
       return { Restaurant: initRestaurents.Restaurant };
     case DELIVERY_TIME:
       return {

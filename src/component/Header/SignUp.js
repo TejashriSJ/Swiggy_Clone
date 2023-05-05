@@ -181,7 +181,7 @@ function SignUp(props) {
               onChange={onChangeInput}
               onBlur={onBlurInputField}
             />
-            <label for="phone-number" className="text-secondary ">
+            <label htmlFor="phone-number" className="text-secondary ">
               {labels.phoneNumber}
             </label>
             <div className="form-floating">
@@ -213,7 +213,7 @@ function SignUp(props) {
                 onChange={onChangeInput}
                 onBlur={onBlurInputField}
               />
-              <label className="text-secondary" for="email">
+              <label className="text-secondary" htmlFor="email">
                 {labels.email}
               </label>
             </div>

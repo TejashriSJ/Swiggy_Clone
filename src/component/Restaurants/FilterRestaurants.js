@@ -1,8 +1,4 @@
-import { useNavigate } from "react-router-dom";
-
 function FilterRestaurants(props) {
-  const navigate = useNavigate();
-
   const onCheckCuisines = (event) => {
     if (event.target.checked) {
       props.setCheckedItems([...props.checkedItems, event.target.name]);
@@ -178,12 +174,6 @@ function FilterRestaurants(props) {
         <button
           className="filter-show-btn w-50"
           onClick={() => {
-            if (props.checkedItems.length === 0) {
-              navigate("/");
-            } else {
-              navigate(`/?filter=${props.checkedItems}`);
-            }
-
             props.setShowFilterOptions(false);
           }}
         >
