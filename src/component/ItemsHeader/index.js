@@ -15,14 +15,19 @@ function ItemsHeader() {
 
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [checkedItems, setCheckedItems] = useState([]);
-  const [isActive, setIsActive] = useState("relavance");
+  const getActiveState = params.get("sortBy");
+
+  const [isActive, setIsActive] = useState(
+    getActiveState === null ? "relevance" : getActiveState
+  );
+  console.log(isActive, "isActive");
 
   const noOfRestaurants = useSelector((state) => {
     return state.restaurants.Restaurant.length;
   });
 
   useEffect(() => {
-    if (checkedItems.length !== 0) {
+    if (checkedItems.length !== 0 && params.get("filter") !== null) {
       params.set("filter", checkedItems);
       navigate({ pathname: currentUrl.pathname, search: params.toString() });
     } else {
@@ -33,8 +38,8 @@ function ItemsHeader() {
   }, [checkedItems]);
 
   return (
-    <div>
-      <nav className="d-none d-lg-flex align-self-xl-center align-self-lg-start items-header  align-items-center mt-5 justify-content-between ">
+    <div className="stickey-header">
+      <nav className="d-none d-lg-flex items-header mt-5 ">
         <h3 className="restaurent-heading ">
           {noOfRestaurants}{" "}
           {noOfRestaurants === 1 ? "restaurant" : "restaurants"}{" "}
@@ -43,7 +48,7 @@ function ItemsHeader() {
           <ul className=" text-dark d-flex  align-items-center gap-5">
             <li
               className={
-                isActive === "relavance"
+                isActive === "relevance"
                   ? "apply-underline nav-link"
                   : "nav-link"
               }
@@ -53,12 +58,12 @@ function ItemsHeader() {
             </li>
             <li
               className={
-                isActive === "delivery-time"
+                isActive === "DELIVERY_TIME"
                   ? "apply-underline nav-link"
                   : "nav-link"
               }
               onClick={() => {
-                setIsActive("delivery-time");
+                setIsActive("DELIVERY_TIME");
                 params.set("sortBy", "DELIVERY_TIME");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -71,10 +76,10 @@ function ItemsHeader() {
             </li>
             <li
               className={
-                isActive === "rating" ? "apply-underline nav-link" : "nav-link"
+                isActive === "RATING" ? "apply-underline nav-link" : "nav-link"
               }
               onClick={() => {
-                setIsActive("rating");
+                setIsActive("RATING");
                 params.set("sortBy", "RATING");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -87,12 +92,12 @@ function ItemsHeader() {
             </li>
             <li
               className={
-                isActive === "low-to-high"
+                isActive === "COST_FOR_TWO"
                   ? "apply-underline nav-link"
                   : "nav-link"
               }
               onClick={() => {
-                setIsActive("low-to-high");
+                setIsActive("COST_FOR_TWO");
                 params.set("sortBy", "COST_FOR_TWO");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -105,12 +110,12 @@ function ItemsHeader() {
             </li>
             <li
               className={
-                isActive === "high-to-low"
+                isActive === "COST_FOR_TWO_H2L"
                   ? "apply-underline nav-link"
                   : "nav-link"
               }
               onClick={() => {
-                setIsActive("high-to-low");
+                setIsActive("COST_FOR_TWO_H2L");
                 params.set("sortBy", "COST_FOR_TWO_H2L");
                 navigate({
                   pathname: currentUrl.pathname,
@@ -142,7 +147,7 @@ function ItemsHeader() {
           </div>
         )}
       </nav>
-      {checkedItems.length !== 0 && (
+      {checkedItems.length !== 0 && params.get("filter") !== null && (
         <div className="d-flex gap-2 checked-items">
           {checkedItems.map((item) => {
             return (

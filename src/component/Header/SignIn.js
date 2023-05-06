@@ -8,7 +8,7 @@ import { LOG_IN } from "../../Redux/actionTypes";
 
 function SignIn(props) {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
@@ -54,7 +54,7 @@ function SignIn(props) {
   };
 
   const onClickOk = () => {
-    navigate(pathname);
+    navigate({ pathname, search: search.toString() });
     setIsFormSubmit(false);
     props.setBtnStatus({ signUp: false, signIn: false });
   };

@@ -1,3 +1,10 @@
+.stickey-header {
+  position: sticky;
+  top: 0vh;
+  background-color: white;
+  z-index: 1;
+  min-width: 80rem;
+}
 .sortBar {
   width: fit-content;
   cursor: pointer;
@@ -12,9 +19,14 @@
 
 .items-header {
   gap: 10rem;
+  min-width: 50rem;
+}
+.restaurent-heading {
+  margin-left: 8rem;
 }
 .checked-items {
   z-index: 2;
+  margin-left: 8rem;
 }
 .each-item-name {
   display: flex;
@@ -26,6 +38,5 @@
 @media (max-width: 1400px) {
   .items-header {
     gap: 0rem;
-    margin-left: 0rem;
   }
 }

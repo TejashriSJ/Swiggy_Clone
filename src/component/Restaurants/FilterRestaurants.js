@@ -1,4 +1,10 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 function FilterRestaurants(props) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+
   const onCheckCuisines = (event) => {
     if (event.target.checked) {
       props.setCheckedItems([...props.checkedItems, event.target.name]);
@@ -174,6 +180,11 @@ function FilterRestaurants(props) {
         <button
           className="filter-show-btn w-50"
           onClick={() => {
+            searchParams.set("filter", props.checkedItems.join(","));
+            navigate({
+              pathname: location.pathname,
+              search: searchParams.toString(),
+            });
             props.setShowFilterOptions(false);
           }}
         >

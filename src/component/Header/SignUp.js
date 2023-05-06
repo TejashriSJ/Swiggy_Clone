@@ -10,7 +10,7 @@ function SignUp(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -130,7 +130,7 @@ function SignUp(props) {
   };
 
   const onClickOk = () => {
-    navigate(pathname);
+    navigate({ pathname, search: search.toString() });
     setIsFormSubmit(false);
     props.setBtnStatus({ signUp: false, signIn: false });
   };
