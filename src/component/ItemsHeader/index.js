@@ -20,7 +20,6 @@ function ItemsHeader() {
   const [isActive, setIsActive] = useState(
     getActiveState === null ? "relevance" : getActiveState
   );
-  console.log(isActive, "isActive");
 
   const noOfRestaurants = useSelector((state) => {
     return state.restaurants.Restaurant.length;

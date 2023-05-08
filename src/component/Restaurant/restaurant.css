@@ -58,8 +58,8 @@
   font-weight: 500;
 }
 .cart-info-display {
-  position: fixed;
-  top: 89vh;
+  position: sticky;
+  bottom: 0vh;
   background-color: green;
   width: 50rem;
   padding: 1rem;
@@ -127,9 +127,9 @@
     width: 90vw;
   }
   .cart-info-display {
-    top: 80vh;
-    margin: 0rem;
     width: 100vw;
+    bottom: 0vh;
+    z-index: 6;
   }
   .item-image img {
     height: 7rem;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import DisplayAllItems from "./DisplayAllItems";
 
@@ -12,6 +13,19 @@ function DisplayRestaurantDetails(props) {
   const [toggleStatus, setToggleStatus] = useState(false);
   const currentLocation = useLocation();
   const searchParams = new URLSearchParams(currentLocation.search);
+
+  const cartData = useSelector((state) => {
+    return state.cart.cartItems;
+  });
+
+  const cartInfo = cartData.reduce(
+    (cartInfo, item) => {
+      cartInfo.count += item.quantity;
+      cartInfo.amount += item.totalAmount;
+      return cartInfo;
+    },
+    { count: 0, amount: 0 }
+  );
 
   const nonVegItem = items.find((item) => {
     return !item.veg;
@@ -122,7 +136,10 @@ function DisplayRestaurantDetails(props) {
                       checked={toggleStatus}
                       onChange={ontoggleType}
                     />
-                    <label class="form-check-label" htmlFor="toggle-food-type">
+                    <label
+                      className="form-check-label"
+                      htmlFor="toggle-food-type"
+                    >
                       <b>Veg Only</b>
                     </label>
                   </div>
@@ -164,6 +181,26 @@ function DisplayRestaurantDetails(props) {
             <h4 className="mt-4">No Items Matched</h4>
           )}
         </div>
+        {cartData.length !== 0 && (
+          <div className="cart-info-display d-flex justify-content-between">
+            <div>
+              {cartInfo.count} {cartInfo.count === 1 ? "item" : "items"} |{" "}
+              <i
+                className="fa-solid fa-indian-rupee-sign fa-xs"
+                style={{ color: "#ffffff" }}
+              ></i>{" "}
+              {cartInfo.amount}
+            </div>
+            <div
+              onClick={() => {
+                navigate("/checkout");
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              View Cart
+            </div>{" "}
+          </div>
+        )}
       </div>
     </>
   );

@@ -197,7 +197,7 @@ function SignUp(props) {
                 onChange={onChangeInput}
                 onBlur={onBlurInputField}
               />
-              <label className="text-secondary" for="name">
+              <label className="text-secondary" htmlFor="name">
                 {labels.name}
               </label>
             </div>

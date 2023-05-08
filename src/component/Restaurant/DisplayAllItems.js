@@ -11,7 +11,6 @@ import {
 } from "../../Redux/actionTypes";
 
 function DisplayAllItems(props) {
-  const navigate = useNavigate();
   const { name, price, img_url, veg, best_seller, category } = props.item;
   const restaurant = props.restaurant;
 
@@ -34,15 +33,6 @@ function DisplayAllItems(props) {
   const [isRestaurantChanged, setIsRestaurantChanged] = useState(false);
 
   const dispatch = useDispatch();
-
-  const cartInfo = cartData.reduce(
-    (cartInfo, item) => {
-      cartInfo.count += item.quantity;
-      cartInfo.amount += item.totalAmount;
-      return cartInfo;
-    },
-    { count: 0, amount: 0 }
-  );
 
   const onClickAdd = () => {
     if (cartRestaurant !== restaurant && cartRestaurant !== "") {
@@ -151,27 +141,6 @@ function DisplayAllItems(props) {
           </div>
         </div>
       </div>
-
-      {cartData.length !== 0 && (
-        <div className="cart-info-display d-flex justify-content-between">
-          <div>
-            {cartInfo.count} {cartInfo.count === 1 ? "item" : "items"} |{" "}
-            <i
-              className="fa-solid fa-indian-rupee-sign fa-xs"
-              style={{ color: "#ffffff" }}
-            ></i>{" "}
-            {cartInfo.amount}
-          </div>
-          <div
-            onClick={() => {
-              navigate("/checkout");
-            }}
-            style={{ cursor: "pointer" }}
-          >
-            View Cart
-          </div>{" "}
-        </div>
-      )}
 
       {isRestaurantChanged && (
         <div className="promptForChangingRestaurant d-flex flex-column justify-content-between p-5">
